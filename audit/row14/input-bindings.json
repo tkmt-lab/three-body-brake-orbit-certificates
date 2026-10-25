@@ -1,0 +1,37 @@
+{
+  "studies/R015/speedup/accepted-step-row14/config.json": {
+    "sha256": "0962f38c7cfaa7e4af88f1d91a2f8125fc198b35e3ef37fd2b81c38eff001e14",
+    "bytes": 16824,
+    "cache": "config.json"
+  },
+  "studies/R015/speedup/accepted-step-row14/cloud-manifest.json": {
+    "sha256": "58e8388f30e8abdd78ce32f5768543408aecff68f6c2356607327702de84221e",
+    "bytes": 16491,
+    "cache": "cloud-manifest.json"
+  },
+  "studies/R015/speedup/accepted-step-row14/full-c0/audit-run.json": {
+    "sha256": "339c0de010e3a7bcd0230003aa3686ec0a74f5253c5c71bad02ea6ee5ccac047",
+    "bytes": 13827,
+    "cache": "full-c0/audit-run.json"
+  },
+  "studies/R015/speedup/accepted-step-row14/full-c1/audit-run.json": {
+    "sha256": "e502e23707005ec381a8eb1f32726cbe33129f66f2a633d9467e95e1a228350c",
+    "bytes": 29906,
+    "cache": "full-c1/audit-run.json"
+  },
+  "studies/R015/speedup/rows-batch1/row14/r90-c0.json": {
+    "sha256": "7a22902eb32427b24c737c8eec9edfcf877b58e9baa73195fb3653a462ee4a88",
+    "bytes": 11360,
+    "cache": "old-c0.json"
+  },
+  "studies/R015/speedup/rows-batch1/row14/r100-c1.json": {
+    "sha256": "751deb722aca31145015d044f9eb9dfb282d0feb7215a709704919f44f32d0f6",
+    "bytes": 39303,
+    "cache": "old-c1.json"
+  },
+  "studies/R015/speedup/rows-batch1/row14/certificate-r100.json": {
+    "sha256": "d08261affa56729db10a5f301d31a95c2b8bb0d3f0e77d5f39087c2c085b5662",
+    "bytes": 27912,
+    "cache": "certificate.json"
+  }
+}

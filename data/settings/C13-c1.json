@@ -1,0 +1,5 @@
+{
+  "precision": 256,
+  "order": 24,
+  "tol_exp": -180
+}

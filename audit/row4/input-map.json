@@ -1,0 +1,10 @@
+{
+  "row": 4,
+  "commit": "74fd682c8708d5c5f3c5e5909fd2bc5c2c576bfd",
+  "prefix": "studies/R015/speedup/accepted-step-row4/",
+  "old_metadata": {
+    "c0": "studies/R015/speedup/rows-batch1/row4/r90-c0.json",
+    "c1": "studies/R015/speedup/rows-batch1/row4/r90-c1.json"
+  },
+  "certificate": "studies/R015/speedup/rows-batch1/row4/certificate-r90.json"
+}

@@ -1,0 +1,13 @@
+{
+  "uncompressed": {
+    "path": "full-check.steps.jsonl",
+    "bytes": 25093754,
+    "sha256": "2df98c66a25778903cee7ec5d5de1a3e526a7719906f062ef591310683400f72"
+  },
+  "compressed": {
+    "path": "full-check.steps.jsonl.gz",
+    "bytes": 2264368,
+    "sha256": "7bb0e0f8e18c8510ab9e66d5c805ef422d20e98036f11c9d8413e3e62f1cb253"
+  },
+  "scope": "derived independent audit trace, not original ODE evidence"
+}

@@ -1,0 +1,95 @@
+{
+  "status": "PASS",
+  "valid_real_record_components": {
+    "state": 9,
+    "local_c1": 81
+  },
+  "negative_controls": [
+    {
+      "name": "C1 remainder on upper margin boundary",
+      "rejected": true,
+      "reason": "(1, 'local_c1', 0, 0, 'strict remainder containment')"
+    },
+    {
+      "name": "state remainder on lower margin boundary",
+      "rejected": true,
+      "reason": "(1, 'state', 0, None, 'strict remainder containment')"
+    },
+    {
+      "name": "state E does not cover polynomial plus margin",
+      "rejected": true,
+      "reason": "(1, 'state', 0, None, 'P+margin not in E')"
+    },
+    {
+      "name": "local polynomial does not contain initial identity",
+      "rejected": true,
+      "reason": "(1, 'local_c1', 0, 0, 'P+margin not in E')"
+    },
+    {
+      "name": "adopted H differs from normal trial H",
+      "rejected": true,
+      "reason": ""
+    },
+    {
+      "name": "unobserved shrink branch cannot be promoted",
+      "rejected": true,
+      "reason": "Only observed normal branch is certified here"
+    },
+    {
+      "name": "state margin excludes zero",
+      "rejected": true,
+      "reason": "(1, 'state', 0, None, 'P+margin not in E')"
+    },
+    {
+      "name": "C1 margin excludes zero",
+      "rejected": true,
+      "reason": "(1, 'local_c1', 0, 0, 'P+margin not in E')"
+    },
+    {
+      "name": "state input excludes polynomial time zero",
+      "rejected": true,
+      "reason": "(1, 'state', 0, None, 'polynomial range excludes time zero')"
+    },
+    {
+      "name": "collision tube has zero pairwise distance",
+      "rejected": true,
+      "reason": "pairwise distance not positive"
+    },
+    {
+      "name": "zero saved running distance",
+      "rejected": true,
+      "reason": "invalid saved distance lower bound"
+    },
+    {
+      "name": "saved running distance exceeds current lower bound",
+      "rejected": true,
+      "reason": "invalid saved distance lower bound"
+    },
+    {
+      "name": "anchor names another call",
+      "rejected": true,
+      "reason": "stale final call anchor"
+    },
+    {
+      "name": "zero final common duration",
+      "rejected": true,
+      "reason": "nonpositive selected duration"
+    },
+    {
+      "name": "negative final common duration",
+      "rejected": true,
+      "reason": "nonpositive selected duration"
+    },
+    {
+      "name": "final common duration outside H",
+      "rejected": true,
+      "reason": "selected duration outside H"
+    },
+    {
+      "name": "target outside native clock",
+      "rejected": true,
+      "reason": "target outside native clock"
+    }
+  ],
+  "scope": "independent normal-branch checker; not validation of producer or unseen shrink code"
+}

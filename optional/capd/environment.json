@@ -1,0 +1,25 @@
+{
+  "observed": {
+    "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0\nCopyright (C) 2022 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+    "libraries": "libgmp10:amd64\t2:6.2.1+dfsg1-1.1\nlibmpfr6:amd64\t4.2.0-1\n",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+    "python": "3.12.10",
+    "original_capd_header_sha256": "0fcaa8a283997726049f275c57ede3dd5b0f0f423de23d2c86a77bc00867ddd5",
+    "source_sha256": {
+      "batch2.reference.cpp": "8ce4ab05a73f9fc94a93e5bd28b56e0817c710891aeed8ba4215df60e1028d0e",
+      "batch2.audit.cpp": "ae49ac4eeabbdd9cd3952ce721b96d47b1546446b701fdde9d1c0adf80e06652",
+      "capd_order_pilot.cpp": "26208dee08463c6f0ecd8ed4fb8930be17ba3ed0d70a49d704c34a3234d9683d",
+      "HighOrderEnclosure.audit.h": "9d53c0e62067d0b4af2dc4c629b110c8ddc1cb8c7289105ec97dde1a1fef63c2",
+      "audit_log.hpp": "95e20bbe9fff659d9169c54ef3575acca699b40f37526dd4485b676242c34b6d",
+      "audit_base.cpp": "a9a487071e1b9e3ec2081cae7ee3db3085304ff820a21eb922bead95fd9511d3",
+      "batch1.reference.cpp": "9ea9e6b4138572bd6e3c1ecffb3e3b866aeeeb42500bd3ec7439e0e059074aea",
+      "boundaries.cpp": "ed8b2acaa8c188877c7d697164e31789f1a6cf1aaa4bf8527ef66158aa956779",
+      "batch1.audit.cpp": "d9f38f2f7d037c2324c546a95d9ece871ff252c012ace55be0d9cce4bfb119b5"
+    }
+  },
+  "observed_environment_sha256": "8e8ec088a2f2f734f4448d3ffd7413e89ce5f7ffaba4f9c85826b7fabcee4084",
+  "basis": "Fingerprint of observed build/source/compiler/library version metadata; not a hash of every OS file.",
+  "base_image_id": "im-8KdfeUwZUeBdMrVNZMRVzx",
+  "build_record_sha256": "a9cc628ede9a9a88af2084b459e9139017e38910219282756fec5822486a480d",
+  "local_modal_version": "modal client version: 1.6.2"
+}

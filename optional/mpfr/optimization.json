@@ -1,0 +1,37 @@
+{
+  "transition_utc": "2026-10-21T20:52:44.596095+00:00",
+  "baseline_rows": [
+    1,
+    2,
+    4
+  ],
+  "fast_rows": [
+    3,
+    5,
+    6,
+    7,
+    8
+  ],
+  "baseline_binary_sha256": "006ab63646125c48f9e06b8aa70628ec21ec89280277a8ba7e32b33dfdb4a8da",
+  "fast_binary_sha256": "d36a73af576ec401c1913fc8d7e1f88e6c55816e27de1af766544cee20ae2e71",
+  "flags_extra": [
+    "-DFAST_INTERVAL"
+  ],
+  "baseline_source_archive_sha256": "035501497480d386bc882945b4f62fbc602e7f7022fd33c234c722874cacdf54",
+  "source_sha256": {
+    "src/interval.hpp": "b438bcdcefc742d4c3d7ab3d618b3acc646500ff92ce097500e9037cbb049a97",
+    "src/certify.cpp": "e925b3c4207e5fe8bf81deb67247298ee72762b3fc5ab4e3ad3f6e69ba29b316",
+    "src/probe.cpp": "932ff20efd5d23b396b3242e7c3aaa45009b6e6e3707fe87b3c8a776346beeb7",
+    "src/dynamics.hpp": "70bfe279256943e5abe52bace1402296cb8ce7ec9c0ba63059f117b87eae70d1",
+    "src/check_multiply.cpp": "c7f60eeb653a72919ee96b25a13d9f36d2a75703b54456d2b7ddf06a5316086d",
+    "src/check.cpp": "98f9b35882ca41de7f98a62dcad559885e5db9079f93e55fdd21f7fd5f674a3f"
+  },
+  "validation": {
+    "multiplication_pairs_bit_equal": 30000,
+    "probe_bytes_identical": true,
+    "probe_sha256": "fef486709ef5d94d8aabaa57bf87b5e3b444473d88a34349e228fd8904b1acaa"
+  },
+  "numerical_parameters_unchanged": true,
+  "running_workers_restarted": false,
+  "reason": "Equivalent sign-selected interval products avoid unnecessary directed multiplications; future worker executable atomically replaced."
+}

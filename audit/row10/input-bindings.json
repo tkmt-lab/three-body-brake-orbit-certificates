@@ -1,0 +1,42 @@
+{
+  "studies/R015/speedup/accepted-step-row10/config.json": {
+    "cache": "config.json",
+    "sha256": "f56eb76a1a92a51185ae866549dfdec3ddcdd0c7c041976a526215f45c6fcbd7",
+    "bytes": 9523
+  },
+  "studies/R015/speedup/accepted-step-row10/cloud-manifest.json": {
+    "cache": "cloud-manifest.json",
+    "sha256": "e34332204e8440721e4aeaba64804f5b9ff580d6832fa99dddb04f1de9cc0271",
+    "bytes": 16532
+  },
+  "studies/R015/speedup/accepted-step-row10/full-c0/audit-run.json": {
+    "cache": "full-c0/audit-run.json",
+    "sha256": "0f8c0b6586f08166213af81d97cb4192d38e413067bff9450c3d49c8c7bacacf",
+    "bytes": 15943
+  },
+  "studies/R015/speedup/accepted-step-row10/full-c1/audit-run.json": {
+    "cache": "full-c1/audit-run.json",
+    "sha256": "132a30cf2e405a17fecda74b35ca057940d09a9f400cdaaa766ae060adddf0dc",
+    "bytes": 32996
+  },
+  "studies/R015/speedup/row10-precision/point56-full-c0-p448-o56.json": {
+    "cache": "old-c0.json",
+    "sha256": "5b3f09e5ea09228452af41412c5a3ae1c0e610f955093f70528d9bad24c5edf0",
+    "bytes": 14810
+  },
+  "studies/R015/speedup/row10-precision/recovery-full-c1-p320-o48-t260-r140.json": {
+    "cache": "old-c1.json",
+    "sha256": "b9fb95fd94a0fc996c2e47346ddfc19876429712b154cc5d386a697bb478003a",
+    "bytes": 51381
+  },
+  "studies/R015/speedup/row10-precision/certificate-c1-p320-o48-t260-r140.json": {
+    "cache": "certificate.json",
+    "sha256": "56aca47e5035580635947cb73647fe852bd8c2163b1634911b351fa01f2f639a",
+    "bytes": 45395
+  },
+  "studies/R015/speedup/row10-precision/terminal-c1-p320-o48-t260-r140.txt": {
+    "cache": "terminal.txt",
+    "sha256": "4f8d9ec7f6a0ccd5e4311af34eadf218430a870c9caadb54d1d48914f395f58c",
+    "bytes": 3975
+  }
+}

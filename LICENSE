@@ -1,0 +1,20 @@
+Copyright 2026 Tatsuhiko Takimoto.
+
+Project-owned code (*.py, *.cpp, *.hpp, Makefile, CI configuration): Apache
+License 2.0; full terms in Apache-2.0.txt.
+
+Article, original documentation, and generated certificate/audit result data:
+Creative Commons Attribution 4.0 International; full terms in CC-BY-4.0.txt.
+
+Third-party numerical records in data/catalogue/ and their copies embedded
+in source/certificate metadata are attributed excerpts from the Hristov et al.
+catalogues. No new license is granted over those original records; their
+original terms apply. This package redistributes only the numerical records
+needed for the stated comparisons, not third-party papers or entire catalogues.
+See SOURCES.md. Mathematical transformations and newly generated results are
+distinct from the original catalogue material.
+
+Arb/FLINT, python-flint, MPFR/GMP, and CAPD are external dependencies; their
+libraries and third-party header implementations are not vendored here and
+retain their own licenses. In particular, the Apache grant for project code
+does not relicense any dependency included by a C++ #include directive.

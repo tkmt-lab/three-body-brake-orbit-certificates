@@ -1,0 +1,41 @@
+\begin{longtable}{@{}rcccc@{}}
+\toprule
+Row & A (Arb) & B (MPFR) & C (CAPD) & Two routes, same zero\\
+\midrule
+\endfirsthead
+\toprule
+Row & A (Arb) & B (MPFR) & C (CAPD) & Two routes, same zero\\
+\midrule
+\endhead
+1 & $\Cert$ & $\Cert$ & $\Notrun$ & Yes\\
+2 & $\Cert$ & $\Cert$ & $\Notrun$ & Yes\\
+3 & $\Cert$ & $\Cert$ & $\Notrun$ & Yes\\
+4 & $\Cert$ & $\Partial$ & $\Cert$ & Yes\\
+5 & $\Cert$ & $\Partial$ & $\Cert$ & Yes\\
+6 & $\Cert$ & $\Partial$ & $\Cert$ & Yes\\
+7 & $\Uncert$ & $\Partial$ & $\Partial$ & ---\\
+8 & $\Uncert$ & $\Partial$ & $\Notrun^{*}$ & ---\\
+9 & $\Uncert$ & $\Partial$ & $\Notrun^{*}$ & ---\\
+10 & $\Cert$ & $\Partial$ & $\Cert$ & Yes\\
+11 & $\Cert$ & $\Partial$ & $\Hold$ & ---\\
+12 & $\Cert$ & $\Cert$ & $\Notrun$ & Yes\\
+13 & $\Cert$ & $\Partial$ & $\Cert$ & Yes\\
+14 & $\Cert$ & $\Notrun$ & $\Cert$ & Yes\\
+15 & $\Cert$ & $\Notrun$ & $\Uncert/\Partial$ & ---\\
+16 & $\Cert$ & $\Notrun$ & $\Hold$ & ---\\
+17 & $\Uncert$ & $\Notrun$ & $\Partial$ & ---\\
+18 & $\Uncert$ & $\Notrun$ & $\Notrun^{*}$ & ---\\
+19 & $\Uncert$ & $\Notrun$ & $\Notrun^{*}$ & ---\\
+20 & $\Uncert$ & $\Notrun$ & $\Partial$ & ---\\
+\midrule
+Certified rows & 13 & 4 & 6 & 10\\
+\bottomrule
+\caption{Status over retained attempts. $\Cert$: certified;
+$\Uncert$: attempted but uncertified; $\Partial$: incomplete flow;
+$\Notrun$: no full-flow attempt. $\Notrun^{*}$: local pilot tests only.
+$\Hold$: second certificate on hold, with incomplete audit evidence.
+For C on row 15, $\Uncert/\Partial$ retains terminal failures and
+incomplete integrations; it does not imply a second certificate. A dash makes no
+same-solution assertion.}
+\label{tab:rows}
+\end{longtable}

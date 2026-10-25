@@ -1,0 +1,43 @@
+{
+  "fixed_at_utc": "2026-10-21T20:35:00Z",
+  "precision_bits": 384,
+  "order": 28,
+  "radius_exp": -100,
+  "tolerance_exp": -180,
+  "max_steps": 1000000,
+  "internal_seconds": 1700,
+  "cap_megabytes": 3000,
+  "cap_seconds": 1800,
+  "max_processes": 2,
+  "threads_each": 1,
+  "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+  "flags": [
+    "-std=c++17",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-I/opt/homebrew/include",
+    "-L/opt/homebrew/lib",
+    "-lmpfr",
+    "-lgmp"
+  ],
+  "machine": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "mpfr": "4.2.2",
+  "gmp": "6.3.0",
+  "mpmath": "1.3.0",
+  "source_sha256": {
+    "src/interval.hpp": "cd0a530a068c81952ac7c974c4918cf6e5030cdebd948f8ea6c2f3f3dbaf86c2",
+    "src/certify.cpp": "e925b3c4207e5fe8bf81deb67247298ee72762b3fc5ab4e3ad3f6e69ba29b316",
+    "src/probe.cpp": "932ff20efd5d23b396b3242e7c3aaa45009b6e6e3707fe87b3c8a776346beeb7",
+    "src/dynamics.hpp": "70bfe279256943e5abe52bace1402296cb8ce7ec9c0ba63059f117b87eae70d1",
+    "src/check.cpp": "98f9b35882ca41de7f98a62dcad559885e5db9079f93e55fdd21f7fd5f674a3f"
+  },
+  "reason": "Fixed after local diagnostic tests and source-time-scale pilot; no producer code, radii or results read.",
+  "binary_sha256": "006ab63646125c48f9e06b8aa70628ec21ec89280277a8ba7e32b33dfdb4a8da",
+  "linked_libraries": "studies/R004/r015-second/bin/certify:\n\t/opt/homebrew/opt/mpfr/lib/libmpfr.6.dylib (compatibility version 9.0.0, current version 9.2.0)\n\t/opt/homebrew/opt/gmp/lib/libgmp.10.dylib (compatibility version 16.0.0, current version 16.0.0)\n\t/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 2100.43.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1356.0.0)\n",
+  "mpmath_install": {
+    "command": "task venv Python 3.14.7; pip install mpmath==1.3.0",
+    "license": "BSD",
+    "purpose": "independent local diagnostics only"
+  }
+}

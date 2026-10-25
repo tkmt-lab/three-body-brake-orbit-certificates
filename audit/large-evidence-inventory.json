@@ -1,0 +1,487 @@
+{
+  "scope": "Saved metadata inventory, not all files are distinct compressed assets: entries include compressed and raw layers. Not included in this Git packet. No automatic fetch or purported download URL.",
+  "provision": "The coordinator must arrange hash-checked archival transfer for a full trace replay; no public hosting receipt exists in this packet. Default checks require none of these files.",
+  "entries": [
+    {
+      "sha256": "52f3485f599d51bb396ad36b1b0414fe347b1a456bb331c09a323681bdcd6da0",
+      "bytes": 488732949,
+      "row": 4,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "2c0013aa3baa44276633c77a595ec44ffbe758eba4a9c62ecd79fb46c8e9d37f",
+      "bytes": 89402384,
+      "row": 4,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "f948f55c79884cfc3477486420e4135664e5d4f558c78af66689e5534259c784",
+      "bytes": 487356470,
+      "row": 4,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "39f65ac21e2d526cf97ba7a60782b7a2a4816fdc6ff769b24e09aba7d6991d3c",
+      "bytes": 1886834219,
+      "row": 4,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "b1c46cd7d5c41667944cb74d710e5500046e6f4e6b64826dcfcf20a4c32a5f4d",
+      "bytes": 1886834331,
+      "row": 4,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "6e9649ce597b61db9bb80321ddd4fa4fe53664c97ff6f4c0846a749b480f7ced",
+      "bytes": 593408891,
+      "row": 4,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "5dbfc758875b44ae118e4b8f3ca13bab6b51787313a4cbf7859e13fddef8fe03",
+      "bytes": 229998686,
+      "row": 4,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "a03153457252458268cbef170b539951fdb72630c8922947f93fc7e353f35a0e",
+      "bytes": 208616271,
+      "row": 4,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "3cea834c63b0fa30363b6d41954c2da5628f998c887bd4ba23c7b52045950b2a",
+      "bytes": 229211155,
+      "row": 4,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "e520b060788f02f9db06f46e9327176ec4374a7c68aeca61462495926237e906",
+      "bytes": 748950440,
+      "row": 4,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "e21d57cd3779758c44cae6d9ce6d49a5448142b6706c91f31f56fc922571c696",
+      "bytes": 748950460,
+      "row": 4,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "eefb883f3fdae8b07b93161dd8de72adf2b7fa37ed40137d88d7e5217a779def",
+      "bytes": 846893680,
+      "row": 4,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "db2bc5bba1bed2b5b909d3a62bb17bb030b925d2dca99784dbf74b7e06055fe3",
+      "bytes": 25469058,
+      "row": 4,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "ba781a191a21da53ff010e88b56899f0ea3eed76e990f45638fd19c0ff3f4786",
+      "bytes": 2298259,
+      "row": 4,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "2a27681d3d12791bd5b4bc020de04ab268bb9ffd9594f24e8b1b6be328b300af",
+      "bytes": 86982085,
+      "row": 5,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "4e1ba2fb91591af84efcc9b4a2bb57e764dfa72e77c518d9cc417f4f5c7d9056",
+      "bytes": 16283667,
+      "row": 5,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "b3bd17b42eaf1f4a7dd10048c7f9e86768f224e341f8734877be5277265332db",
+      "bytes": 86829006,
+      "row": 5,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "6e14b1d293b274fb049730a88ad7a331bf0f4198eafe9eb6e5115cddfdbcc61c",
+      "bytes": 328647703,
+      "row": 5,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "9eefd584cb7df4aef3e577f462537c8d4e1eadcce042909526c6ab052dc48027",
+      "bytes": 328647733,
+      "row": 5,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "ee99bc6f55b549f15cac79091ee3a84d670327937ec50286130bf7333bce3e18",
+      "bytes": 102680388,
+      "row": 5,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "d6bee3726e22cc13f7bef9aeaabaf283c4bb606d6d6f86e018268a24666d28c5",
+      "bytes": 106075645,
+      "row": 5,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "7965347cbadaae4ac22b8e3f0c9b527de892539ff88d53f8e27e2bd2428347ce",
+      "bytes": 102551582,
+      "row": 5,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "ccbd9b9d79e6b1ffda59edc4c0a4e688194b17c9d25c7274ba512f7b03b9630d",
+      "bytes": 105831091,
+      "row": 5,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "cc73f6e5268fd11cd7e4d1abcd76984200261668e9be4cbe9decf75b85e17079",
+      "bytes": 351833088,
+      "row": 5,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "d1a064bd9228562e5194d0a083171b7803916eeb20221e7a3f7a884fcc501c03",
+      "bytes": 351833138,
+      "row": 5,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "1b3c5add8962312cffd06ad2b6868c8636634df373e41b51387a0a868ec4118c",
+      "bytes": 399226556,
+      "row": 5,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "83627a701c203edf533af21ce441d660ce7c908dea4e9e405517bb6c8c7998ba",
+      "bytes": 86961985,
+      "row": 6,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "a37c79ad0d96f33f0d69a0e77b21d41bb6ca0ebf0a06436ced91bc1002435c91",
+      "bytes": 16168794,
+      "row": 6,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "1e32c361132b6ba6289fa2dce8ffee6b7e40094c0ca7b86a6a1e9de4e9cdaac5",
+      "bytes": 86769334,
+      "row": 6,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "5180959a112b42dcf3fc17687abffdd418ab89746707bff392169ab6db090cc5",
+      "bytes": 328816392,
+      "row": 6,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "2f7db0043537ccfc9041fca070699af06e7286115edf756a39c00f7f34c74fe9",
+      "bytes": 328816354,
+      "row": 6,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "07bf2d560db1515677e6803cc32a8132158ba7a5c79c8a16ab78d74d7ce4f63b",
+      "bytes": 102748736,
+      "row": 6,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "45590fd59ef0827ebf29a33d567af55162745de610d2fd6b1f80168eb99b6982",
+      "bytes": 106484134,
+      "row": 6,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "0cb2fa0ef99131694346165750688878402e9079d2c9dc882c4b327adf852bc9",
+      "bytes": 104687456,
+      "row": 6,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "17119adc6b1c8727451e07bff9a41f50e128cf9d2662c7905b4e473cc58618df",
+      "bytes": 106195632,
+      "row": 6,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "ecae1d4b026f4ff8e6aaf267a773c2e410069c2550d624a0506303ca0273098c",
+      "bytes": 350210453,
+      "row": 6,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "357af88a8adc99cd42f2eb4eea4be84ebc12f3e4cf6b232365c6ff54656735db",
+      "bytes": 350210450,
+      "row": 6,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "7a0e6f520dc9908457e48fc8839f182d0a3550bc7c378346a4d69699c582e823",
+      "bytes": 399426060,
+      "row": 6,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "e085a954c77ed3af67438a5a15831bf5fe14e06a81c577a0c6c34ffbd1da0815",
+      "bytes": 101362699,
+      "row": 10,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "84ffe7a47631a846db17ffca7acb759f571b2726ee14a591873c13ee38079bb3",
+      "bytes": 18950219,
+      "row": 10,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "89b22c3430f5ff3a078a20ee8636b040f4a3210a388bd79fcda8354a44fce3a2",
+      "bytes": 101155312,
+      "row": 10,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "02edc215de761bb55671523874545474d33d0d98d16d949817bff54e335089fa",
+      "bytes": 388201670,
+      "row": 10,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "bdddc53c81b27ceea9a1bc0791a1137204be68bf4ed1854d7075f3329990436b",
+      "bytes": 388201667,
+      "row": 10,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "f849e6f5a0ba64b0da4a93ed12679660055e9db68bdbe1625e35f352ba4193d9",
+      "bytes": 121030015,
+      "row": 10,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "1e7b9d25ca3f991da47fad4b35df1db46d296f0f471e839f5d2610be7f058f49",
+      "bytes": 130694260,
+      "row": 10,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "42a59125fd14e2d7e00ac18968d06b2bbf335aecf3f155fc055f0a94c02d6f40",
+      "bytes": 125983606,
+      "row": 10,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "391f18714927aaf365147d8f0fff787ce277bc6ede8f1e03e0dc74745f7ff845",
+      "bytes": 130363166,
+      "row": 10,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "5d4d7a21371f8ce3343445d42bf9a8a8175b2ee969fd4a144027a56b60b964db",
+      "bytes": 22534754,
+      "row": 10,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "387411234469d8c486e137513eac21b1f1b263a60765b67b0abdebc48370a466",
+      "bytes": 429595655,
+      "row": 10,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "ed9c7c0f6f506c5187825354918270534368bfb4cca61d7814e1154f6b42e9de",
+      "bytes": 429595686,
+      "row": 10,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "bd0421735cc2c568e920cbc10e0915cba625cc6e3d69ce2761dea3303160b926",
+      "bytes": 479678491,
+      "row": 10,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "41f90169b707bd01cdc5e8ec6ea9ff572c71b49e16bd0af99f30447c4091ea5b",
+      "bytes": 90379872,
+      "row": 10,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "a00e46d3bef2833acf9f4372eb236ad1fae0747427f0a5bc7fd3e84dc176c40b",
+      "bytes": 479759806,
+      "row": 13,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "04d7d813180bfcde92a6899b104ca5e0bd08a26ba76ffe189dc1ab1e7861ea50",
+      "bytes": 90137265,
+      "row": 13,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "9b37f285953aeb9d2c791b2d988eb4190374b13202035354dc4c3c97ee287022",
+      "bytes": 478559837,
+      "row": 13,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "7118b1e269fe31c2f78b4cd3ec489e2d5b6ba4a4175a58b56ae1ce10628280e7",
+      "bytes": 1827978349,
+      "row": 13,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "b96018b5b4199280ec5431c4624e93a8e8c42cc5e9ac5ac52d8cd7e778f80225",
+      "bytes": 1827978185,
+      "row": 13,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "cc649ba9fd7fe1d3309187c43bc811f4c170778c3090caf1b3ad617b48dfc07c",
+      "bytes": 584666081,
+      "row": 13,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "c5678f2b2023b402dc1f49ef5d0c147c7920ae223bcb19f2301ed435f9ee5a33",
+      "bytes": 216773166,
+      "row": 13,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "198e383a382a2bf679bd4663d0dacce68acf0e760ac330fc2940f391c9630246",
+      "bytes": 203514209,
+      "row": 13,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "52e8fade94a083f05642bab9c547055b1dc0af8b4186f46c51d60cb2a1e76092",
+      "bytes": 216090139,
+      "row": 13,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "1daf834ef33d5fa021ab237388ce0fa909b01d82ff3306ff6816ab156aa0740c",
+      "bytes": 712625266,
+      "row": 13,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "e4f8ee3fb00f1f9cf482aad0ab22f1832b18a07d41bd0ee1ebfde8903fa92629",
+      "bytes": 712625277,
+      "row": 13,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "9d7fd4c531b2e4206f0411214f6942ad725605c61fa9169fc7cc43a42a9a2acc",
+      "bytes": 833589148,
+      "row": 13,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "2df98c66a25778903cee7ec5d5de1a3e526a7719906f062ef591310683400f72",
+      "bytes": 25093754,
+      "row": 13,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "7bb0e0f8e18c8510ab9e66d5c805ef422d20e98036f11c9d8413e3e62f1cb253",
+      "bytes": 2264368,
+      "row": 13,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "dd42a1371a5f9e5d691f1ee3f97a42df2a0b708d95da43d1c706bc250958f56d",
+      "bytes": 491387658,
+      "row": 14,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "b1a5e8ce245db5afc80901f4bfc82dd4b9446edcb4460336c99464c780ca5b61",
+      "bytes": 90576603,
+      "row": 14,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "7c6297f062b1dace6a6283d8a6ea7a1f7733693391b69b10178fa9999a959357",
+      "bytes": 489778901,
+      "row": 14,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "46c80d8978409944f915476979767b89b49b7c2ec0d1ee1df8ad74aa30c3488c",
+      "bytes": 1875490605,
+      "row": 14,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "ae64a1765f81065d89b249ee43ea896bddbc5264d4463c1aca7cf2167421c350",
+      "bytes": 1875490544,
+      "row": 14,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "2392ed0962e9d8f6a1547477df95a93ec170038c1499cf391ce198cf329df954",
+      "bytes": 590946171,
+      "row": 14,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "341beee19b3cda8bc0156a387bc982c549e495fc555b929a25967caf9af127f5",
+      "bytes": 218881234,
+      "row": 14,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "55a820ee766a32a9523f7cf64b593f811e51149287c199cce3143fcf215c6f3f",
+      "bytes": 207961751,
+      "row": 14,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "f1ae8762c50e5d6e08e654885bd4ad1f3ba65f79333d9f1bcb040be24c434c29",
+      "bytes": 218042175,
+      "row": 14,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "8750147ce5c1579dc9fd149ffe258e4b3cbfd0d68890ef413d27045882297884",
+      "bytes": 721422412,
+      "row": 14,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "f4d3e901cc7e4489c0acf09090c0868a580c86c3f0b68cff4316c510caea9c71",
+      "bytes": 721422302,
+      "row": 14,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "c026903a614ce00e3584ebedb0ae4a920e30b2058792e27b2f19dd4a6172b8ca",
+      "bytes": 842565742,
+      "row": 14,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "cfa9f0ca2405b543d14f5b395508e94682fe129304d823b70d23602f0a8bf8b4",
+      "bytes": 25360522,
+      "row": 14,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    },
+    {
+      "sha256": "0159cfcc458d9ee83fc0b1e4633cfc3aae3a6653a9e16c76e6398599930f7910",
+      "bytes": 2288779,
+      "row": 14,
+      "description": "saved large-trace binding; exact identity and compression layer in associated audit record"
+    }
+  ],
+  "sum_bytes_across_recorded_layers": 32748872036
+}

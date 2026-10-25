@@ -1,0 +1,12 @@
+{
+  "full-check.steps.jsonl.gz": {
+    "sha256": "f93f78d46142de27fc3d6c6dc3d7c49cf64dea83b98beda29662285467a97908",
+    "bytes": 548179,
+    "storage": "direct gzip; no uncompressed trace created"
+  },
+  "prefix-check.steps.jsonl.gz": {
+    "sha256": "c72a42fe77a4965724fb9be410b6d2758737df88463cfec987e64417a2bd81cb",
+    "bytes": 1257,
+    "storage": "direct gzip; no uncompressed trace created"
+  }
+}

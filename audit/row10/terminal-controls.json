@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "controls": [
+    {
+      "name": "J excludes independently enclosed derivative",
+      "rejected": true,
+      "reason": ""
+    },
+    {
+      "name": "F0 differs from center endpoint",
+      "rejected": true,
+      "reason": ""
+    },
+    {
+      "name": "ND differs from family endpoint",
+      "rejected": true,
+      "reason": ""
+    }
+  ]
+}

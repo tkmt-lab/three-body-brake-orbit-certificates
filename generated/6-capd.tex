@@ -1,0 +1,21 @@
+\begin{longtable}{@{}rrrccc@{}}
+\toprule
+Row & C $C^0$ slabs & C $C^1$ slabs & Radius & Approximate $d_{2,C}$ & $q_C$ (approx.)\\
+\midrule
+4 & 37,024 & 12,325 & $2^{-90}$ & $1.323016679\times10^{-7}$ & 0.1430438542\\
+5 & 4,880 & 4,868 & $2^{-140}$ & $4.177760495\times10^{-6}$ & 0.0002962666\\
+6 & 4,884 & 4,871 & $2^{-130}$ & $4.801121064\times10^{-6}$ & 0.1317961327\\
+10 & 5,752 & 5,849 & $2^{-140}$ & $8.134207033\times10^{-8}$ & 0.0003566111\\
+13 & 36,489 & 12,134 & $2^{-90}$ & $5.315061159\times10^{-6}$ & 0.0298201405\\
+14 & 36,875 & 12,264 & $2^{-100}$ & $4.028534374\times10^{-6}$ & 0.0102606219\\
+\bottomrule
+\caption{C certificates. The squared-distance bounds and contraction
+bounds $q_C=\norm{I-C_0J}$ are display approximations; the contraction
+column transcribes the saved terminal field \texttt{q\_upper}. This is
+distinct from the full Krawczyk inclusion ratio defined in
+Section~\ref{sec:certificate}. The saved exact intervals decide the
+inequalities. Strict Krawczyk inclusion and the
+nonzero endpoint factor also pass in all six cases. $C^0$ counts
+include reused center evaluations, which are independent of box radius.}
+\label{tab:capd}
+\end{longtable}

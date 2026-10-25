@@ -1,0 +1,32 @@
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{@{}p{.25\linewidth}p{.69\linewidth}@{}}
+\toprule
+Component & Present assurance and extent\\
+\midrule
+Quarter-period reduction & Prose proof in Lemma~\ref{lem:symmetry}; the
+lemma is a common premise of all three implementations.\\
+Flow and derivative & Arb validates the 13 stated rows; MPFR separately
+validates four; CAPD validates six further rows. Outward arithmetic,
+the respective integrator, compiler and runtime belong to the trusted
+computing base.\\
+Terminal algebra & Exact rational checks of the saved intervals verify
+the finite matrix and contraction tests. They take the saved flow and
+derivative enclosures as inputs.\\
+Agreement & Equal rational centers, nested boxes and uniqueness identify
+the same reduced zero for rows 1, 2, 3, 4, 5, 6, 10, 12, 13 and 14.\\
+CAPD audit & Separate integer/rational checks of the saved local
+inclusions, time choices, derivative reduction and terminal data cover
+the six selected paths. Taylor coefficients and set updates retain a
+fixed-source trust premise; these audits are not new ODE integrations.\\
+Formal and human review & No Lean formalization and no human expert
+review of this work. The scope and outcome of AI mathematical reading
+are recorded in the accompanying verification record.\\
+Claim boundary & Existence, a positive collision margin and local
+parameter-box uniqueness; least period, stability, geometric
+distinctness and completeness of the table remain open here.\\
+\bottomrule
+\end{tabular}
+\caption{The layers of the computer-assisted argument.}
+\label{tab:assurance}
+\end{table}

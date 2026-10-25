@@ -1,0 +1,10 @@
+{
+  "row": 10,
+  "commit": "a6e5c0cdb2b262c2414c48c9ead21bb75a3d917a",
+  "prefix": "studies/R015/speedup/accepted-step-row10/",
+  "old_metadata": {
+    "c0": "studies/R015/speedup/row10-precision/point56-full-c0-p448-o56.json",
+    "c1": "studies/R015/speedup/row10-precision/recovery-full-c1-p320-o48-t260-r140.json"
+  },
+  "certificate": "studies/R015/speedup/row10-precision/certificate-c1-p320-o48-t260-r140.json"
+}

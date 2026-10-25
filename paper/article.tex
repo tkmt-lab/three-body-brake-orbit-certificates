@@ -1,0 +1,1112 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array,longtable}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,xurl}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{1em}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.13}
+\renewcommand{\topfraction}{.9}
+\renewcommand{\bottomfraction}{.6}
+\renewcommand{\textfraction}{.08}
+\renewcommand{\floatpagefraction}{.75}
+\setcounter{topnumber}{3}
+\setcounter{totalnumber}{4}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert_\infty}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\Cert}{\mathrm{C}}
+\newcommand{\Uncert}{\mathrm{U}}
+\newcommand{\Partial}{\mathrm{P}}
+\newcommand{\Notrun}{\mathrm{N}}
+\newcommand{\Hold}{\mathrm{H}}
+\title{Interval certification of selected equal-mass\newline
+three-body periodic brake orbits}
+\author{Tatsuhiko Takimoto\\\small Independent researcher}
+\date{Version 1.0.0, 25 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give interval-arithmetic existence certifications for parameter boxes
+associated with 13 of the first 20 rows of a published table of equal-mass
+planar three-body periodic brake orbits. An Arb implementation certifies
+rows 1--6 and 10--16. Separate flow computations certify ten of these
+rows: a handwritten MPFR integrator certifies rows 1, 2, 3 and 12, and a
+CAPD multiprecision C1-Lohner implementation certifies rows 4, 5, 6, 10,
+13 and 14. Its six selected paths have source and saved-trace audits
+of the local inclusions and their connection to the original family.
+Equal centers, nested parameter boxes and uniqueness identify the same
+normalized solution in each pair. The argument combines quarter-period
+symmetry, validated flow and derivative enclosures, a three-variable
+Krawczyk contraction and positive pairwise-distance bounds. The CAPD
+route uses nonuniform time steps and forward elimination of the
+multiple-shooting connection derivatives. Each certificate gives a
+unique reduced zero in its stated box and a nonconstant, collision-free
+periodic solution. The implementations share the model and symmetry
+proof. Row counts do not establish geometric distinctness; least period,
+stability and catalogue completeness are outside the claim. Seven entries
+numerically match previously catalogued self-dual candidates; earlier
+labels for rows 4, 10 and 12 were not identified in the tables reviewed.
+We make no claim of priority.
+\end{abstract}
+
+\section{The question and the result}
+High-precision numerical data locate a candidate periodic orbit, but a
+small return residual alone does not establish the existence of an exact
+periodic solution. We study this question for the Euler-coordinate data
+of Hristov et al.\ \cite{Hristov,Data}. The concrete object to be certified
+is a parameter box around the finite decimals in a table row. The
+numerical discovery of these candidates belongs to the catalogue authors.
+A zero of
+a reduced quarter-period equation supplies the exact parameters; a
+symmetry argument then supplies the full periodic solution.
+
+\begin{theorem}[Computer-assisted result]
+\label{thm:result}
+Let $x_{0,j}=(a_{0,j},b_{0,j},T_{0,j})$ be the exact rational triple given
+by the first three decimal fields of row $j$ of
+\texttt{euler\_100\_4860.txt}, with row numbers starting at one. For
+\[
+ \mathcal J=\{1,2,3,4,5,6,10,11,12,13,14,15,16\},
+\]
+the Arb computations certify exactly one zero $x_j=(a_j,b_j,T_j)$ of
+the map $F$ defined in Section~\ref{sec:model} in
+\[
+ X_j=x_{0,j}+[-r_j,r_j]^3,\qquad
+ r_j=\begin{cases}2^{-120},&j=2,3,\\2^{-160},&j\in\mathcal J\setminus\{2,3\}.
+ \end{cases}
+\]
+The solution with these parameters is nonconstant, is collision-free for
+all real time, and has $T_j>0$ as a period. Its pairwise distances have
+the positive lower bounds in Table~\ref{tab:distances}.
+
+For $j\in\{1,2,3,4,5,6,10,12,13,14\}$, a second flow implementation also
+certifies exactly one zero in $Y_j=x_{0,j}+[-s_j,s_j]^3$, where
+\[
+ s_j=\begin{cases}
+ 2^{-90},&j=4,13,\\
+ 2^{-100},&j=1,2,3,12,14,\\
+ 2^{-130},&j=6,\\
+ 2^{-140},&j=5,10.
+ \end{cases}
+\]
+The second computation uses the handwritten MPFR integrator for
+$j=1,2,3,12$ and CAPD for $j=4,5,6,10,13,14$. In each case its zero is $x_j$.
+\end{theorem}
+
+The uniqueness assertion concerns $F$ with labels, Euler initial
+configuration, orientation and scale fixed. It is not uniqueness in the
+space of all periodic three-body motions. A certified $T_j$ need not be
+the least period. Thus the theorem concerns 13 row-associated boxes,
+without counting geometrically distinct orbits. The numerical part of
+the proof is the set of validated flow and derivative enclosures. The
+analytic implications of those enclosures are proved below.
+
+\subsection{Scope of assurance}
+\label{sec:assurance}
+Table~\ref{tab:assurance} gives the current guarantee structure. The
+three implementations use a common model, reduced map and prose
+symmetry proof. Arb and handwritten MPFR share the Taylor sufficient
+conditions below; CAPD supplies a different flow-enclosure route.
+Code separation therefore tests implementation agreement under common
+mathematical premises. The MPFR and CAPD routes both use MPFR scalar
+arithmetic. This is a computer-assisted prose argument with the trusted
+numerical components stated in the table.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{@{}p{.25\linewidth}p{.69\linewidth}@{}}
+\toprule
+Component & Present assurance and extent\\
+\midrule
+Quarter-period reduction & Prose proof in Lemma~\ref{lem:symmetry}; the
+lemma is a common premise of all three implementations.\\
+Flow and derivative & Arb validates the 13 stated rows; MPFR separately
+validates four; CAPD validates six further rows. Outward arithmetic,
+the respective integrator, compiler and runtime belong to the trusted
+computing base.\\
+Terminal algebra & Exact rational checks of the saved intervals verify
+the finite matrix and contraction tests. They take the saved flow and
+derivative enclosures as inputs.\\
+Agreement & Equal rational centers, nested boxes and uniqueness identify
+the same reduced zero for rows 1, 2, 3, 4, 5, 6, 10, 12, 13 and 14.\\
+CAPD audit & Separate integer/rational checks of the saved local
+inclusions, time choices, derivative reduction and terminal data cover
+the six selected paths. Taylor coefficients and set updates retain a
+fixed-source trust premise; these audits are not new ODE integrations.\\
+Formal and human review & No Lean formalization and no human expert
+review of this work. The scope and outcome of AI mathematical reading
+are recorded in the accompanying verification record.\\
+Claim boundary & Existence, a positive collision margin and local
+parameter-box uniqueness; least period, stability, geometric
+distinctness and completeness of the table remain open here.\\
+\bottomrule
+\end{tabular}
+\caption{The layers of the computer-assisted argument.}
+\label{tab:assurance}
+\end{table}
+
+The audits do not independently regenerate Taylor coefficients, rebuild
+the cloud binaries, or formally verify the software. Compiler,
+MPFR/GMP, CAPD arithmetic, automatic differentiation and set operations,
+hardware, and the correspondence between fixed sources and recorded
+executions remain trusted. The methods share modeling and symmetry
+premises; prior exposure to some results prevents a claim of complete
+blinding. For rows 4 and 14, the terminal matrix $J$ comes from the
+saved derivative reduction, not the final global matrix. Only the
+row-10 direct path is used here. The general step-shrinking rounding
+counterexample remains valid; the six selected paths use audited normal
+accepted calls. Rows 11, 15 and 16 retain Arb-only certification;
+the second-route certificates for rows 11 and 16 remain on hold.
+
+Exact artifact locations, input and source hashes, settings, retained
+unsuccessful attempts, comparison records, and the provenance of the
+mathematical reading are documented in the accompanying
+\texttt{VERIFICATION-RECORD.md}.
+
+\section{Model and quarter-period symmetry}
+\label{sec:model}
+All three masses and the gravitational constant are one. Positions and
+velocities are $q_i,p_i\in\R^2$, with
+\begin{equation}
+ \dot q_i=p_i,\qquad
+ \dot p_i=\sum_{k\ne i}\frac{q_k-q_i}{\lVert q_k-q_i\rVert_2^3}.
+ \label{eq:newton}
+\end{equation}
+For $x=(a,b,T)$ we impose
+\begin{equation}
+ \begin{split}
+ q_1(0)&=(-1,0),\quad q_2(0)=(1,0),\quad q_3(0)=(0,0),\\
+ p_1(0)&=p_2(0)=(a,b),\qquad p_3(0)=-2(a,b).
+ \end{split}
+ \label{eq:initial}
+\end{equation}
+The reduced map is
+\begin{equation}
+ F(a,b,T)=\bigl(p_{1x},p_{1y},p_{2x}\bigr)(T/4).
+ \label{eq:F}
+\end{equation}
+It is defined on any parameter box for which the required flows exist
+without collision through all relevant terminal times.
+
+Each input row has fields $(a_0,b_0,T_0,T^*)$. We integrate through a
+quarter of the third field $T$, rather than the fourth, scale-invariant
+period $T^*$. The decimal strings are exact rational centers, not assumed
+error bounds on the unknown exact solution.
+
+\begin{lemma}[Three terminal components suffice]
+\label{lem:symmetry}
+Suppose a solution of \eqref{eq:newton}--\eqref{eq:initial} is
+collision-free on the closed interval $[0,\tau]$, with $\tau>0$. If
+\begin{equation}
+ p_{1x}(\tau)=p_{1y}(\tau)=p_{2x}(\tau)=0,
+ \qquad q_{2x}(\tau)-q_{3x}(\tau)\ne0,
+ \label{eq:terminal}
+\end{equation}
+then it extends to a collision-free solution on $\R$ with period
+$4\tau$. A common lower bound $d>0$ for all three pairwise distances on
+$[0,\tau]$ holds on the full extension. If $(a,b)\ne(0,0)$, the solution
+is nonconstant.
+\end{lemma}
+\begin{proof}
+Linear momentum $P=\sum_i p_i$ and scalar angular momentum
+$L=\sum_i q_i\times p_i$ vanish initially. Pairwise cancellation of
+forces gives $\dot P=0$, and the central-force identity gives $\dot L=0$.
+The center of mass remains zero, so $q_3=-q_1-q_2$ for the whole
+interval. At $\tau$, the three zero components in \eqref{eq:terminal}
+and $P=0$ imply $p_{3x}=0$ and $p_{3y}=-p_{2y}$. Thus
+$p_{ix}(\tau)=0$ for all $i$ and $p_{1y}(\tau)=0$, so all
+$q_{iy}p_{ix}$ terms in the cross products vanish. Hence
+\[
+ 0=L=(q_{2x}-q_{3x})p_{2y}.
+\]
+The nonzero factor in \eqref{eq:terminal} forces $p_{2y}=p_{3y}=0$.
+Thus all velocities vanish at $\tau$.
+
+Time reversal about this brake instant defines
+$q(\tau+s)=q(\tau-s)$ for $0\le s\le\tau$. It joins with zero velocity
+and solves the same second-order equation. Uniqueness on the
+collision-free domain makes it the continuation of the original
+solution. Its state at $2\tau$ is $(q(0),-p(0))$.
+
+Define the involution on triples of planar vectors by
+\[
+ S(z_1,z_2,z_3)=(-z_2,-z_1,-z_3).
+\]
+It is the composition of a swap of the first two equal masses and a
+rotation through $180$ degrees, and is a symmetry of the equations.
+For \eqref{eq:initial}, $Sq(0)=q(0)$ and $Sp(0)=-p(0)$. Define the
+second half of the solution by
+\[
+ (q(2\tau+s),p(2\tau+s))=S(q(s),p(s)),\qquad0\le s\le2\tau.
+\]
+The initial state of this half equals the state already reached at
+$2\tau$, so uniqueness again gives a smooth continuation. At $4\tau$
+the state is $S(q(0),-p(0))=(q(0),p(0))$. Periodic continuation defines
+the solution for every real time. Time reversal and $S$ preserve the
+set of pairwise distances, so the common lower bound persists. A
+nonzero initial velocity proves nonconstancy.
+\end{proof}
+
+The nondegeneracy test is essential: three zero velocity components
+without the nonzero factor in \eqref{eq:terminal} would not force all
+velocities to vanish. In center-of-mass coordinates the tested quantity
+is $q_{2x}-q_{3x}=q_{1x}+2q_{2x}$. Under the hypotheses of
+Lemma~\ref{lem:symmetry}, a zero of $F$ determines a collision-free
+periodic solution.
+
+\section{Validated integration and the finite-dimensional test}
+\label{sec:method}
+We describe sufficient conditions used by the computations. Every
+interval operation in this section is an inclusion operation. Matrix
+norms are induced infinity norms, and boxes are closed rectangular
+interval sets. A positive distance bound is checked on a whole time
+slab, not on sampled trajectory points.
+
+\subsection{An eight-dimensional center-of-mass system}
+Write
+\[
+ y=(x_1,y_1,x_2,y_2,u_1,w_1,u_2,w_2),
+ \qquad q_3=-q_1-q_2,\quad p_3=-p_1-p_2.
+\]
+With $d_{12}=q_2-q_1$, $d_{13}=-2q_1-q_2$ and
+$d_{23}=-q_1-2q_2$, set $g(d)=d/(d\cdot d)^{3/2}$. Then
+\[
+ \dot p_1=g(d_{12})+g(d_{13}),\qquad
+ \dot p_2=-g(d_{12})+g(d_{23}).
+\]
+Together with $\dot q_i=p_i$, these equations define $y'=f(y)$ and
+recover \eqref{eq:newton}. For
+\[
+ B(d)=(d\cdot d)^{-3/2}I_2-3(d\cdot d)^{-5/2}dd^{\mathsf T},
+\]
+the Jacobian has block form
+\begin{equation}
+ A=Df=\begin{pmatrix}0&I_4\\H&0\end{pmatrix},\qquad
+ H=\begin{pmatrix}
+ -B_{12}-2B_{13}& B_{12}-B_{13}\\
+ B_{12}-B_{23}&-B_{12}-2B_{23}
+ \end{pmatrix},
+ \label{eq:jacobian}
+\end{equation}
+where $B_{ij}=B(d_{ij})$. Every evaluation requires a strictly positive
+lower bound for each $d_{ij}\cdot d_{ij}$. Polynomial squaring and
+positive square roots are evaluated with their respective inclusion
+rules.
+
+\subsection{Existence and variational bounds on one slab}
+Let $Y$ enclose all starting states of a step of rational length $h>0$.
+Choose a collision-free box $B$ and a fixed positive diagonal matrix
+$D$ for which
+\begin{equation}
+ Y+[0,h]f(B)\subseteq B,\qquad
+ \alpha\ge\sup_{z\in B}\norm{D^{-1}A(z)D},\qquad h\alpha<\tfrac14.
+ \label{eq:picard}
+\end{equation}
+For any starting state in $Y$, the Picard operator maps continuous
+$B$-valued paths into themselves. In the weighted sup norm
+$\sup_t\norm{D^{-1}y(t)}$ it is a contraction with constant at most
+$h\alpha$. Thus a unique solution exists on the entire slab and stays
+in $B$.
+
+Let $M$ be the derivative of the step flow, with $M(0)=I_8$. Its
+equation is $M'=A(y)M$. The integral equation, in the same weighted
+norm, gives
+\begin{equation}
+ \sup_{0\le t\le h}\norm{D^{-1}M(t)D}
+ \le\frac1{1-h\alpha},\qquad
+ \norm{D^{-1}(M(t)-I_8)D}\le E:=\frac{h\alpha}{1-h\alpha}.
+ \label{eq:variation}
+\end{equation}
+In particular, a componentwise enclosure for every such $M(t)$ is
+\begin{equation}
+ \mathcal M_{ij}=\delta_{ij}+[-E D_{ii}/D_{jj},E D_{ii}/D_{jj}].
+ \label{eq:Mbox}
+\end{equation}
+
+The unweighted choice is $D=I_8$. The weighted implementation uses
+$D=\operatorname{diag}(I_4,wI_4)$ with a positive point dyadic $w$ fixed
+throughout each slab. By \eqref{eq:jacobian}, a certified bound
+$R_H\ge\sup_B\norm{H}$ supplies
+\begin{equation}
+ \alpha=\max(w,R_H/w).
+ \label{eq:weight}
+\end{equation}
+When $R_H>0$, one may choose a dyadic $w\ge\sqrt{R_H}$; for $R_H=0$,
+one may take $w=1$. The method also permits $w<1$. This changes the
+bound used for a local proof, not the vector field. Since $D$ is fixed
+within the slab, there is no derivative of $D$ in the variational
+equation. Taylor remainders and terminal contractions are tested in
+the original coordinates.
+
+\subsection{Taylor remainders and propagation}
+Normalized Taylor coefficients $c_k$ of the state satisfy
+\begin{equation}
+ (k+1)c_{k+1}=[s^k]f\left(\sum_{j=0}^k c_js^j\right).
+ \label{eq:taylor}
+\end{equation}
+If $A(y(s))=\sum A_ks^k$, the variational coefficients satisfy
+$(k+1)M_{k+1}=\sum_{j=0}^k A_jM_{k-j}$. The recurrences are evaluated
+with outward interval operations.
+
+For an order $N$ step from a point $c$, evaluate the state polynomial
+through degree $N-1$ at $c$ and enclose its degree $N$ remainder using
+the coefficient evaluated on $B$. Thus an enclosure $C$ of $\phi_h(c)$
+is
+\begin{equation}
+ C=\sum_{k=0}^{N-1}c_k(c)h^k+c_N(B)h^N.
+ \label{eq:remainder}
+\end{equation}
+This follows componentwise from Taylor's theorem, since all intermediate
+states belong to $B$. Apply the same argument to the joint system
+$(y,M)'=(f(y),A(y)M)$. Its initial set is $(Y,I_8)$ and its remainder
+set is $(B,\mathcal M)$. This gives an interval matrix $\mathcal D$
+containing $D\phi_h(z)$ for every $z\in Y$. The local remainder
+tolerance is an additional acceptance criterion; the existence and
+inclusion arguments are \eqref{eq:picard}--\eqref{eq:remainder}.
+
+To control wrapping, represent the starting set by $c+Qb$, where $Q$
+is an invertible point matrix and $b$ is a zero-centered box; choose $Y$
+as a rectangular enclosure. Track the center-parameter solution
+separately in $c+Qp$, maintaining $p\subseteq b$. The mean-value
+formula on the convex box $Y$ gives
+\[
+ \phi_h(c+Qb)\subseteq C+\mathcal DQb.
+\]
+Choose a new point center $c_+\in C$ and point basis $Q_+$. An interval
+inverse of $Q_+$ yields zero-centered enclosures
+\begin{equation}
+ \begin{split}
+ b_+&\supseteq Q_+^{-1}(C-c_++\mathcal DQb),\\
+ p_+&\supseteq Q_+^{-1}(C-c_++\mathcal DQp).
+ \end{split}
+ \label{eq:propagation}
+\end{equation}
+A floating-point QR factorization may propose a basis, but its
+orthogonality is not an assumption: invertibility and the inverse
+enclosure are checked for the chosen point matrix.
+
+The $8\times2$ sensitivity $W=\partial y/\partial(a,b)$ starts with
+four zero position rows and velocity rows $(1,0),(0,1),(1,0),(0,1)$.
+If $W\in Q R_W$, update
+$R_{W,+}\supseteq Q_+^{-1}\mathcal DQ R_W$. This encloses the
+derivative for all parameters in the box, not only its center.
+
+\subsection{The variable terminal time}
+The integrator reaches an exact dyadic time $t_0$ near $T_0/4$.
+Every step length is rational and positive, and the saved lengths sum
+exactly to $t_0$. For $X=x_0+[-r,r]^3$, choose
+\begin{equation}
+ \Delta\ge\abs{T_0/4-t_0}+r/4.
+ \label{eq:Delta}
+\end{equation}
+An endpoint box $B_e$ is accepted when
+\begin{equation}
+ Y_e+[-\Delta,\Delta]f(B_e)\subseteq B_e,\qquad
+ \Delta\sup_{B_e}\norm{D^{-1}AD}<\tfrac14,
+ \label{eq:endpicard}
+\end{equation}
+where $Y_e$ encloses the parameter-box states at $t_0$. The positive-
+and negative-time Picard arguments then cover all required terminal
+times. If $\delta_0$ encloses the exact rational $T_0/4-t_0$, the
+center solution at $T_0/4$ belongs to
+$c+Qp+\delta_0 f(B_e)$. Its three selected velocities give an enclosure
+$F_0$ of $F(x_0)$. Errors from converting the decimal centers to binary
+are included in $p$ and $\delta_0$.
+
+For completeness, let $W_0$ enclose $W(t_0)$, choose
+$\alpha_e\ge\sup_{B_e}\norm{D^{-1}AD}$, and put
+$E_e=\Delta\alpha_e/(1-\Delta\alpha_e)$. If
+$n\ge\norm{D^{-1}W_0}$, an enclosure throughout the small terminal
+interval is
+\[
+ W_e=W_0+\{V:\abs{V_{ij}}\le D_{ii}E_en\}.
+\]
+An endpoint derivative enclosure is consequently
+$W_0+[-\Delta,\Delta]A(B_e)W_e$. Selecting its velocity rows
+$(1x,1y,2x)$ gives the $a,b$ columns of an interval matrix $J$.
+The $T$ column consists of the same components of $f(B_e)/4$.
+The chain rule therefore gives $DF(X)\subseteq J$.
+
+\subsection{Krawczyk contraction and collision margins}
+Choose an invertible point matrix $C_0\in\R^{3\times3}$, put
+$Z=I_3-C_0J$, and form the centered Krawczyk enclosure
+\begin{equation}
+ K_c=-C_0F_0+Z[-r,r]^3.
+ \label{eq:Krawczyk}
+\end{equation}
+The finite-dimensional tests are
+\begin{equation}
+ K_c\subset\operatorname{int}[-r,r]^3,\qquad \norm{Z}<1.
+ \label{eq:Kconditions}
+\end{equation}
+
+\begin{proposition}
+\label{prop:contraction}
+Suppose $F$ is continuously differentiable on a neighborhood of $X$,
+$F(x_0)\in F_0$, $DF(X)\subseteq J$, $C_0$ is invertible, and
+\eqref{eq:Kconditions} holds. Then $F$ has exactly one zero in $X$.
+\end{proposition}
+\begin{proof}
+For $G(x)=x-C_0F(x)$, the integral mean-value formula shows
+$G(X)\subseteq x_0+K_c\subseteq\operatorname{int}X$.
+Also $DG(X)\subseteq Z$, so $G$ is a contraction on the complete
+space $X$. Banach's theorem gives exactly one fixed point in $X$.
+Invertibility of $C_0$ identifies fixed points of $G$ with zeros of $F$.
+\end{proof}
+
+The validated flow on collision-free slabs provides the smoothness
+needed here.
+
+Every slab and the terminal box must have a common positive rational
+lower bound $d_2$ for all three squared pairwise distances. A displayed
+distance bound $d$ is rounded down so that $d^2\le d_2$. We also require
+that the interval for $q_{1x}+2q_{2x}$ on $B_e$ exclude zero, that the
+parameter box have $T>0$, and that its initial velocity exclude
+$(0,0)$. At the zero supplied by Proposition~\ref{prop:contraction},
+Lemma~\ref{lem:symmetry} then gives the claimed nonconstant periodic
+solution and the full-time collision margin.
+
+\section{Separate implementations and identification of the zeros}
+\label{sec:implementations}
+Implementation A uses Python 3.14.7, python-flint 0.9.0 and FLINT 3.6.0
+with Arb real balls. Implementation B is a separate C++ program using
+MPFR 4.2.2 and GMP 6.3.0 with lower and upper interval endpoints. Both
+implement the Taylor method of Section~\ref{sec:method}, with separate
+interval and basis handling. Implementation C uses CAPD 6.1.0 with
+multiprecision enabled, MPFR 4.2.0 and GMP 6.2.1. Its C1-Lohner
+integration, normalized clock and derivative reduction are described
+below. A versus B and A versus C provide two flow routes per doubly
+certified row, using three codebases overall.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Run family & Bits & Order & Parameter radius & Tolerance\\
+\midrule
+A, rows 2, 3 & 320 & 24 & $2^{-120}$ & $2^{-170}$\\
+A, other successes & 448 & 48 & $2^{-160}$ & $2^{-250}$\\
+B, all successes & 384 & 28 & $2^{-100}$ & $2^{-180}$\\
+C, rows 4, 13, 14: $C^0$ & 320 & 24 & Point enclosure & $2^{-220}$\\
+C, rows 4, 13, 14: $C^1$ & 256 & 24 & $2^{-90}$ or $2^{-100}$ & $2^{-180}$\\
+C, rows 5, 6, 10: $C^0$ & 448 & 56 & Point enclosure & $2^{-300}$\\
+C, rows 5, 6, 10: $C^1$ & 320 & 48 & $2^{-130}$ or $2^{-140}$ & $2^{-260}$\\
+\bottomrule
+\end{tabular}
+\caption{Selected successful settings. A uses an unweighted Picard
+norm on rows 2 and 3 and a fixed diagonal weight on the other rows;
+B uses the unweighted norm. C uses CAPD doubleton enclosures. These
+run families are not a common-setting benchmark.}
+\label{tab:settings}
+\end{table}
+
+\subsection{CAPD: a fixed clock for a variable period}
+Adjoin the period as a constant ninth state, $\theta=T$, and solve
+\begin{equation}
+ \frac{d}{ds}(y,\theta)=\bigl((\theta/512)f(y),0\bigr),
+ \qquad 0\le s\le128.
+ \label{eq:clock}
+\end{equation}
+For each initial parameter triple the physical time is
+$t=\theta s/512$, so the fixed endpoint $s=128$ is exactly $t=T/4$.
+The entries $p_i$ remain physical velocities. The affine initial map
+$E(a,b,T)$ encodes \eqref{eq:initial} and $\theta=T$; a three-column
+doubleton carries the correlated parameter box $E(Y_j)$. Outward
+conversion of the exact rational center is included. The center
+computation encloses $E(x_{0,j})$ and supplies $F(x_{0,j})$; the box
+computation supplies the derivative over every parameter in $Y_j$.
+
+The nonvalidated reference trajectory serves progress and cost
+estimation. CAPD's step controller selects the accepted steps; reference
+samples neither prescribe a certified partition nor replace the evolving
+initial family. In particular, a reference interval count must not be
+identified with the number of accepted slabs.
+
+Let $H_k$ be the saved positive interval of step lengths. The audits
+establish that every nonfinal $H_k$ is a singleton. Choose its rational
+value $h_k$, and choose the final length as
+\[
+ h_{m-1}=128-\sum_{k<m-1}h_k.
+\]
+The final choice is positive and belongs to the final $H_{m-1}$; it need
+not equal its left endpoint. Put $s_0=0$ and $s_{k+1}=s_k+h_k$.
+These are exact rational times common to all parameters, and $s_m=128$.
+Membership of a length in $H_k$ is used only after a uniform local
+inclusion over that interval has been established.
+
+For the selected normal calls, let $\Pi_k$ enclose the Taylor polynomial
+on $[0,\sup H_k]$, $M_k$ be its remainder margin, $\mathcal E_k$ the
+candidate enclosure, and $R_k$ the remainder evaluated on that enclosure.
+The state and local variational components satisfy
+\[
+ R_k\subset\operatorname{int} M_k,\qquad
+ \Pi_k+M_k\subseteq\mathcal E_k,\qquad
+ 0\in\operatorname{int}M_k.
+\]
+The time-zero input state box and variational identity matrix are
+contained in the corresponding polynomial ranges and enclosures. Strictly
+positive squared distances on the state tube make the extended ODE
+smooth there. Its Taylor formula and a first-exit argument give enclosure
+on $[0,\sup H_k]$, uniformly for every $h\in H_k$. The local $9\times9$
+matrix $L_k$ encloses the flow derivative for the input box and every
+such $h$, including the variational remainder. The fixed-source audit
+connects these polynomial and remainder records to CAPD's Taylor/AD
+calculation; the separate integer checks verify their inclusions.
+
+To connect these local statements to the original parameters, write
+$u=(a,b,T)\in Y_j$, $S=DE$, and, for the normalized flow $\Phi$,
+\[
+ Y_k(u)=\Phi_{s_k}(E(u)),\qquad V_k(u)=D_uY_k(u).
+\]
+At each selected time, both the cached axis box $B_k$ and the geometric
+doubleton $\mathcal R_k$ contain $Y_k(u)$. They need not contain each
+other. The set update preserves this reachable-family assertion; no
+assertion that the saved output contains the image of every fictitious
+point of $B_k$ is required. The matrix family carried by the set update
+contains a true matrix $A_k(u)$ with
+\[
+ A_k(u)S=V_k(u),\qquad A_0=I_9.
+\]
+The actual derivative obeys the chain rule at the same $u,s_k,h_k$.
+Thus the local product and the saved global $9\times3$ enclosure
+$G_{k+1}$ both contain $V_{k+1}(u)$. This simultaneous state and tangent
+induction, starting with the original affine family, justifies their
+intersection. It does not reset a state or a derivative at a reference
+sample. The center calculation has the same time-coverage construction
+but starts with the center enclosure only, independently of the command
+line's radius label.
+
+\subsection{Eliminating the connection variables}
+Let $\phi_k(z_k,T)-z_{k+1}=0$ be the eight-state connection equation
+between consecutive nodes. With the initial node prescribed by the
+initial map, the Jacobian with respect to the subsequent nodes
+$z_1,\ldots,z_m$ is block lower triangular, with diagonal blocks $-I$.
+Forward elimination of these variables transports the derivative with
+respect to $(a,b,T)$, retaining the parameter dependence of the prescribed
+initial node. Using the ninth constant state includes the direct period
+dependence:
+\begin{equation}
+ D_0\supseteq DE,\qquad
+ D_{k+1}=\operatorname{out}(L_kD_k)\cap G_{k+1}.
+ \label{eq:elimination}
+\end{equation}
+Here $D_k$ is an interval enclosure of $V_k(u)$ for every original
+parameter $u$. Interval products are rounded outward onto the
+$2^{-240}$ grid for rows 4, 13 and 14, and the $2^{-512}$ grid for
+rows 5, 6 and 10. Intersecting each propagated enclosure with CAPD's
+global parameter-derivative enclosure preserves inclusion, because both
+contain the true derivative for the same initial family and time node.
+The final rows $(p_{1x},p_{1y},p_{2x})$ give a $3\times3$ enclosure $J$
+of $DF(Y_j)$.
+
+The proof uses coverage of every true trajectory starting in $E(Y_j)$.
+Consequently the reduced derivative is a derivative enclosure on the
+whole original parameter box. Uniqueness of an isolated root of an
+expanded shooting system alone would not give that coverage. The
+reduction uses local and global enclosures from the same CAPD flow; they
+are not two independent integrations.
+
+The terminal MPFR calculation uses 512 bits for rows 4, 13 and 14,
+and 1024 bits for rows 5, 6 and 10, and applies
+\eqref{eq:Krawczyk}--\eqref{eq:Kconditions}. The audits separately
+propagate a reduced enclosure using a $2^{-512}$ grid and verify that
+the saved terminal derivative contains it. For rows 4, 13 and 14 this is
+an inclusion, not numerical equality of the old and audited reductions.
+The terminal $J$ is linked to the velocity rows of the saved reduction;
+the terminal $F_0$ and nondegeneracy factor are linked to the center and
+box endpoints, respectively. Exact rational checks of these saved
+terminal inputs establish invertibility, strict inclusion, contraction
+and the nonzero factor. The six local-inclusion audits supply the
+additional connection to the flow described above; terminal algebra
+alone would not supply it.
+
+\subsection{Identifying the two zeros for each row}
+\label{sec:samezero}
+\begin{proposition}[Identification by nested boxes]
+\label{prop:same}
+Suppose the same reduced equation $F$ has one certified zero in each
+of two boxes $X\subseteq Y$, and has exactly one zero in $Y$. Then the
+two zeros coincide.
+\end{proposition}
+\begin{proof}
+The zero in $X$ belongs to $Y$ and must equal its unique zero.
+\end{proof}
+
+For all ten rows, the saved comparisons establish equal exact rational
+centers. The radii in Theorem~\ref{thm:result} give $X_j\subseteq Y_j$.
+Proposition~\ref{prop:same} therefore identifies the two zeros. A and B
+cover the variable endpoint by \eqref{eq:Delta}; C covers it by
+\eqref{eq:clock}. All represent the same map $F$. Overlap of endpoint
+or residual intervals is a useful consistency check, but nesting and
+uniqueness are the reason for the same-solution conclusion.
+
+Rows 1, 2, 3 and 12 have B's unweighted Taylor route. Rows 4, 5, 6,
+10, 13 and 14 have C's CAPD route. These ten second-route certificates
+do not rely on A's weighted integration bounds. Rows 11, 15 and 16
+remain certified by A alone in the adopted evidence; partial CAPD
+records on rows 11 and 16 do not add a second certificate.
+
+\section{Results by table row}
+\label{sec:results}
+The present result set concerns rows 1--20 of the 4,860-row input.
+Table~\ref{tab:rows} distinguishes certification, unsuccessful
+terminal tests, partial integration and unstarted runs. Counts describe
+coverage over retained attempts with varying settings, rather than a
+success rate under a single fixed protocol.
+
+\begingroup
+\small
+\setlength{\LTcapwidth}{\textwidth}
+\setlength{\LTpre}{4pt}
+\begin{longtable}{@{}rcccc@{}}
+\toprule
+Row & A (Arb) & B (MPFR) & C (CAPD) & Two routes, same zero\\
+\midrule
+\endfirsthead
+\toprule
+Row & A (Arb) & B (MPFR) & C (CAPD) & Two routes, same zero\\
+\midrule
+\endhead
+1 & $\Cert$ & $\Cert$ & $\Notrun$ & Yes\\
+2 & $\Cert$ & $\Cert$ & $\Notrun$ & Yes\\
+3 & $\Cert$ & $\Cert$ & $\Notrun$ & Yes\\
+4 & $\Cert$ & $\Partial$ & $\Cert$ & Yes\\
+5 & $\Cert$ & $\Partial$ & $\Cert$ & Yes\\
+6 & $\Cert$ & $\Partial$ & $\Cert$ & Yes\\
+7 & $\Uncert$ & $\Partial$ & $\Partial$ & ---\\
+8 & $\Uncert$ & $\Partial$ & $\Notrun^{*}$ & ---\\
+9 & $\Uncert$ & $\Partial$ & $\Notrun^{*}$ & ---\\
+10 & $\Cert$ & $\Partial$ & $\Cert$ & Yes\\
+11 & $\Cert$ & $\Partial$ & $\Hold$ & ---\\
+12 & $\Cert$ & $\Cert$ & $\Notrun$ & Yes\\
+13 & $\Cert$ & $\Partial$ & $\Cert$ & Yes\\
+14 & $\Cert$ & $\Notrun$ & $\Cert$ & Yes\\
+15 & $\Cert$ & $\Notrun$ & $\Uncert/\Partial$ & ---\\
+16 & $\Cert$ & $\Notrun$ & $\Hold$ & ---\\
+17 & $\Uncert$ & $\Notrun$ & $\Partial$ & ---\\
+18 & $\Uncert$ & $\Notrun$ & $\Notrun^{*}$ & ---\\
+19 & $\Uncert$ & $\Notrun$ & $\Notrun^{*}$ & ---\\
+20 & $\Uncert$ & $\Notrun$ & $\Partial$ & ---\\
+\midrule
+Certified rows & 13 & 4 & 6 & 10\\
+\bottomrule
+\caption{Status over retained attempts. $\Cert$: certified;
+$\Uncert$: attempted but uncertified; $\Partial$: incomplete flow;
+$\Notrun$: no full-flow attempt. $\Notrun^{*}$: local pilot tests only.
+$\Hold$: second certificate on hold, with incomplete audit evidence.
+For C on row 15, $\Uncert/\Partial$ retains terminal failures and
+incomplete integrations; it does not imply a second certificate. A dash makes no
+same-solution assertion.}
+\label{tab:rows}
+\end{longtable}
+
+For the distance columns, Table~\ref{tab:distances} gives downward-rounded
+linear bounds $d_A$, Table~\ref{tab:second} displays approximations of
+$\sqrt{d_{2,B}}$, and Table~\ref{tab:capd} displays approximations of
+the squared bounds $d_{2,C}$.
+
+\begin{longtable}{@{}rrrl@{}}
+\toprule
+Row & A steps & A radius & Full-time distance lower bound $d_A$\\
+\midrule
+1 & 1,885 & $2^{-160}$ & 0.287841\\
+2 & 39,860 & $2^{-120}$ & 0.014202\\
+3 & 47,639 & $2^{-120}$ & 0.015223\\
+4 & 8,047 & $2^{-160}$ & 0.000363\\
+5 & 10,809 & $2^{-160}$ & 0.002044\\
+6 & 10,922 & $2^{-160}$ & 0.002188\\
+10 & 12,963 & $2^{-160}$ & 0.000286\\
+11 & 13,080 & $2^{-160}$ & 0.000266\\
+12 & 5,670 & $2^{-160}$ & 0.287755\\
+13 & 8,813 & $2^{-160}$ & 0.002304\\
+14 & 8,902 & $2^{-160}$ & 0.001999\\
+15 & 14,991 & $2^{-160}$ & 0.000007\\
+16 & 13,321 & $2^{-160}$ & 0.000012\\
+\bottomrule
+\caption{Selected A certificates. Every decimal in the last column
+is a downward-rounded bound with $d_A^2\le d_2$. The slab bound holds
+through the quarter-period and transfers to all time by
+Lemma~\ref{lem:symmetry}. Different successful certificates for the
+same row can give different valid lower bounds.}
+\label{tab:distances}
+\end{longtable}
+
+\begin{longtable}{@{}rrccc@{}}
+\toprule
+Row & B steps & B radius & Approximate $\sqrt{d_{2,B}}$ & Approximate contraction bound\\
+\midrule
+1 & 2,326 & $2^{-100}$ & 0.288723577 & $1.48\times10^{-18}$\\
+2 & 31,139 & $2^{-100}$ & 0.014202810 & $3.58\times10^{-3}$\\
+3 & 38,951 & $2^{-100}$ & 0.015223399 & $6.31\times10^{-3}$\\
+12 & 6,995 & $2^{-100}$ & 0.288635565 & $1.70\times10^{-6}$\\
+\bottomrule
+\caption{B certificates on four of the ten doubly certified solutions. The
+last two columns are display approximations of saved quantities;
+they are not rounded bounds used in the proof. Strict positivity,
+strict inclusion and contraction are decided on the saved binary
+intervals and their exact rational interpretation.}
+\label{tab:second}
+\end{longtable}
+
+\begin{longtable}{@{}rrrccc@{}}
+\toprule
+Row & C $C^0$ slabs & C $C^1$ slabs & Radius & Approximate $d_{2,C}$ & $q_C$ (approx.)\\
+\midrule
+4 & 37,024 & 12,325 & $2^{-90}$ & $1.323016679\times10^{-7}$ & 0.1430438542\\
+5 & 4,880 & 4,868 & $2^{-140}$ & $4.177760495\times10^{-6}$ & 0.0002962666\\
+6 & 4,884 & 4,871 & $2^{-130}$ & $4.801121064\times10^{-6}$ & 0.1317961327\\
+10 & 5,752 & 5,849 & $2^{-140}$ & $8.134207033\times10^{-8}$ & 0.0003566111\\
+13 & 36,489 & 12,134 & $2^{-90}$ & $5.315061159\times10^{-6}$ & 0.0298201405\\
+14 & 36,875 & 12,264 & $2^{-100}$ & $4.028534374\times10^{-6}$ & 0.0102606219\\
+\bottomrule
+\caption{C certificates. The squared-distance bounds and contraction
+bounds $q_C=\norm{I-C_0J}$ are display approximations; the contraction
+column transcribes the saved terminal field \texttt{q\_upper}. This is
+distinct from the full Krawczyk inclusion ratio defined in
+Section~\ref{sec:certificate}. The saved exact intervals decide the
+inequalities. Strict Krawczyk inclusion and the
+nonzero endpoint factor also pass in all six cases. $C^0$ counts
+include reused center evaluations, which are independent of box radius.}
+\label{tab:capd}
+\end{longtable}
+\endgroup
+
+A attempts every row from 1 to 20. Its seven uncertified rows are
+7, 8, 9 and 17--20. Minimum-step stops and time limits give no
+nonexistence conclusion. A positive distance bound on a completed
+prefix does not bound an unintegrated portion of the quarter-period.
+
+For B, rows 4--11 and 13 remain partial, and rows 14--20 have no
+full-flow attempt. Historical C tests on rows 5, 6, 10, 11 and 16 failed
+at radii $2^{-90}$ and $2^{-100}$. The smaller-box successes for rows
+5, 6 and 10 in Table~\ref{tab:capd} supersede those failures only for
+the stated boxes and selected paths.
+
+For rows 11 and 16, the available second-route evidence does not establish
+all required flow and terminal connections. Neither partial result is
+adopted as a second certificate.
+
+Later full box attempts on rows 7, 15, 17 and 20 stopped at normalized
+times approximately 50.1671, 72.2639, 41.0290 and 41.3307 of 128;
+their full center runs did not start. Rows 8, 9, 18 and 19 have local
+pilots only. The earlier row-15 $2^{-90}$ terminal failure and
+$2^{-100}$ stop after 26,140 slabs at time 108.646304 are retained.
+None of these incomplete or unsuccessful tests proves nonexistence.
+In particular, rows 11, 15 and 16 still have A's existence certificates.
+
+\subsection{Measured work and recorded cost}
+The CAPD phase times reported below are observations from the earlier
+order-24 runs for rows 4, 13 and 14; they do not include the later
+certifications of rows 5, 6 and 10.
+The selected B runs take approximately 241, 1,963, 2,338 and 507 seconds
+for rows 1, 2, 3 and 12. For rows 1 and 12 these values are taken from
+the certificates' elapsed-time fields; for rows 2 and 3 they are rounded
+worker wall times. C's successful $C^1$ native runs take about
+3,704, 3,093 and 2,831 seconds for rows 4, 13 and 14, respectively.
+Each requires a center evaluation as well: about 3,758, 3,735 and
+3,732 seconds, with reuse across radii at the same exact center.
+C's phase times exclude compilation, record checks and transfer.
+Different boxes, precisions and machines preclude a controlled speed
+comparison between implementations.
+
+The historical eight-row C batch covering rows 4, 5, 6, 10, 11, 14, 15 and 16 has
+22 completed integrations, one retained partial run and three platform
+preemptions. It uses one physical core and 1\,GiB per flow process, with
+at most eight concurrent cores. The largest recorded peak resident
+memory among the completed native integrations is 63,672\,KiB. The
+batch's conservative recorded cost estimate is US\$2.393, including
+unsuccessful attempts and a US\$0.50 transfer/storage allowance. It is
+an estimate, not an observed invoice. The row-13 full-box attempt and
+smaller-box certification have separate recorded estimates of
+US\$0.340 and US\$0.225; the latter reuses the earlier center evaluation.
+These amounts exclude earlier development, local pilots, the later
+row-5/6/10 smaller-box runs and subsequent method audits. They measure
+the indicated historical batches, not the total cost of this article.
+Shared credit-ledger balances and audit expenditure are different
+accounting units and are not added to these figures. Local-pilot
+extrapolations are not measurements of full-orbit speed or cost.
+
+The table contains 4,840 further rows, 21--4,860, outside A's attempted
+range and outside the present claim. Extending a run or improving an
+enclosure may change an uncertified status. No conclusion about the
+full database follows from this finite prefix.
+
+\begin{proof}[Proof of Theorem~\ref{thm:result}]
+For A and B, the full sequence of accepted slabs satisfies the Picard
+self-map and contraction tests, positive distance tests, and state and
+variational Taylor remainder bounds. Verified basis changes preserve
+the enclosure inductively. The final time correction gives $F_0$ and
+$J$. For C, the audited uniform local inclusions and reachable-family/tangent
+induction cover the original initial family at common rational times;
+connection elimination encloses its parameter derivative. Thus each route supplies the inclusions required
+in Proposition~\ref{prop:contraction}.
+The saved terminal tests pass exact rational checks of invertibility,
+strict interior inclusion and contraction. The positive distance bound,
+nonzero terminal factor, positive period and nonzero initial velocity
+complete the hypotheses of Lemma~\ref{lem:symmetry}. Thus every stated
+box contains its unique reduced zero and supplies the periodic solution
+and collision margin. For the ten doubly certified rows, the saved
+exact-center and box-inclusion comparisons, together with
+Proposition~\ref{prop:same}, identify the zeros.
+\end{proof}
+
+\section{Certificate format and levels of checking}
+\label{sec:certificate}
+A and B certificates are JSON objects containing the input hash, row
+number, exact decimal center, radius exponent, precision, Taylor order,
+norm choice, remainder tolerance, complete rational step list, and its
+exact total time. Each certificate also contains the final point center and basis,
+the point and parameter-box enclosures, the sensitivity enclosure,
+$F_0,J,C_0,K_c,Z,B_e$, the common squared distance bound, and the
+nondegeneracy interval. An interval ball is saved as
+\begin{equation}
+ m2^a\ \mathbin{\pm}\ n2^b,\qquad m,a,n,b\in\mathbb Z,\quad n\ge0,
+ \label{eq:serialization}
+\end{equation}
+with integers encoded as strings where necessary. Matrix entries are
+stored row by row. This preserves exact binary endpoints independently
+of a decimal display. Point matrices have radius zero.
+
+For C, the contraction bound $q_C$ and the full inclusion ratio
+$\rho_C=\max_i\sup_{u\in(K_c)_i}|u|/r$ are separate quantities.
+The saved fields are \nolinkurl{terminal.mpfr.q_upper} and
+\nolinkurl{terminal.fraction.max_inclusion_ratio_float}, respectively.
+The latter is a display approximation; exact interval and rational tests
+decide strict inclusion. For example, row 13 has approximately
+$q_C=0.02982014046783021$ and $\rho_C=0.02982014046810953$.
+Their agreement at the shorter precision of Table~\ref{tab:capd} does
+not identify the two quantities: $\rho_C$ includes the center residual
+term in \eqref{eq:Krawczyk}.
+
+The terminal certificate serializes a finite algebraic implication
+conditional on its flow and derivative enclosures. A success flag alone
+does not establish those analytic premises. Three additional kinds of
+evidence must be distinguished: source examination, saved local-inclusion
+and reduction checks, and a fresh validated integration replay. For C,
+the six selected paths have the first two kinds, including all final
+accepted-call records and the uniform-$H$ argument in Section~4.1.
+They do not have independent regeneration of Taylor coefficients or
+new ODE reintegration from these audits. The trust boundary is stated
+once in Section~\ref{sec:assurance}.
+
+Separate full-flow computations by B and C cover the ten specified
+rows. C's separately written saved-record checks and source audits
+connect its local inclusions to its terminal enclosures; a terminal
+rational checker by itself cannot do so.
+
+An unsuccessful Picard, tolerance or terminal inclusion test is
+inconclusive. In particular, failure of strict Krawczyk inclusion
+does not prove that no zero exists. The documented rounding
+counterexample in CAPD's general step-shrinking formula is retained;
+the result here relies on the selected normal accepted calls, not on a
+general claim that every step-selection branch is correct.
+
+\section{Relation to earlier work and remaining questions}
+\label{sec:prior}
+Hristov, Hristova, Puzynina, Sharipov and Tukhliev
+\cite{Hristov} supply the numerical catalogue and its quarter-period
+search formulation; their Section 4.2 imposes the vanishing of all six
+velocity components. Their published Euler-coordinate table
+\cite{Data} supplies every center in this work. Montgomery's treatment
+of brake orbits \cite[Section 3]{Montgomery} explains the role of time
+reversal, equal-mass permutations and Euler configurations.
+Lemma~\ref{lem:symmetry} states and proves the sufficient direction
+used here, with the additional nondegeneracy check that makes three
+velocity components sufficient.
+
+Computer-assisted existence proofs in the three-body problem have
+substantial precedents. Kapela and Zgliczy\'nski
+\cite[Sections 2--3]{KapelaZgliczynski} combine rigorous flow and
+derivative integration with interval Newton and Krawczyk methods in
+their proof of the figure eight and its local uniqueness. Kapela and
+Sim\'o \cite{KapelaSimo} develop computer-assisted existence and KAM
+stability methods and apply them to the figure eight and selected
+rotating eights. We use no stability conclusion from that work for
+the brake orbits studied here. Johansson's Arb library
+\cite{Johansson} supplies rigorous ball arithmetic through the
+python-flint interface \cite{PythonFlint}; MPFR supplies directed,
+correctly rounded scalar operations for B and C
+\cite{MPFR}. These contributions provide the objects, symmetry ideas,
+existence-proof methods and arithmetic on which this work depends.
+
+Earlier existence results for periodic brake orbits include the
+isosceles solutions of Moeckel, Montgomery and Venturelli
+\cite[Theorem 2 and Section 5]{BrakeSyzygy}. Those solutions encounter
+binary collisions and are distinct from the collision-free objects
+certified here. The numerical collision-free searches of Li and Liao
+\cite{LiLiao} and Hristov et al.\ \cite{Revisited,Hristov} supply the
+catalogue context. CAPD's rigorous flow and variational algorithms
+\cite{CAPD} supply C's numerical foundation.
+
+\subsection{Correspondence with earlier numerical catalogues}
+Among the thirteen Arb-certified entries in Theorem~\ref{thm:result},
+ten---1, 2, 3, 4, 5, 6, 10, 12, 13 and 14---have certificates from two
+implementations for the same reduced zero. These entries belong to the
+central-symmetry free-fall catalogue of Hristov et al.\
+\cite{Hristov,Data}. Rows 1, 2, 3, 5, 6, 13 and 14 numerically
+match self-dual entries 1, 2, 3, 8, 9, 27 and 28 of the earlier free-fall
+catalogue \cite{Revisited,FreeData}, respectively. Entry 8 is also listed
+in Tables 2 and 3 of the earlier paper; entry 9 is identified in its
+accompanying online catalogue. These correspondences identify the
+published numerical candidates; they are not additional
+validated orbit-identification theorems. The thirteen Arb certifications
+and the ten same-solution comparisons retain the scope stated in
+Theorem~\ref{thm:result}.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{@{}cp{.28\linewidth}p{.48\linewidth}@{}}
+\toprule
+2025 row & Earlier full-table row & Earlier self-dual label\\
+\midrule
+1 & 3 & self-dual \#1\\
+2 & 32 & self-dual \#2\\
+3 & 35 & self-dual \#3\\
+4 & Not matched & Earlier label unconfirmed\\
+5 & 126 & self-dual \#8\\
+6 & 129 & self-dual \#9\\
+10 & Not matched & Earlier label unconfirmed\\
+12 & Not matched & Earlier label unconfirmed\\
+13 & 807 & self-dual \#27\\
+14 & 810 & self-dual \#28\\
+\bottomrule
+\end{tabular}
+\caption{Numerical correspondence status for the ten rows with two flow
+implementations. The earlier table \cite{FreeData} contains 24,582
+entries in \texttt{sol\_80.txt} and 236 self-dual entries in
+\texttt{sd\_80.txt}; all row numbers are one-based. ``Not matched'' means
+no match in these reviewed earlier tables, not a new numerical discovery:
+all ten entries are published in the 2025 catalogue \cite{Data}.}
+\label{tab:crosswalk}
+\end{table}
+
+The comparison uses the paired Euler-coordinate and free-fall tables
+published with \cite{Hristov,Data}. This pairing provides the change of
+representation; the present comparison does not validate it by a new
+flow integration. For each of the seven numerical matches in
+Table~\ref{tab:crosswalk}, the four free-fall fields (two initial position
+coordinates, period and scale-invariant period) agree to an absolute
+difference below $5\times10^{-79}$. Agreement of finite decimals identifies
+a numerical catalogue entry, but supplies no error bound on an older
+approximation and no proof that it equals a certified root. The rigorous
+same-root argument in Section~\ref{sec:samezero} instead concerns two
+certified boxes for the same 2025 row.
+
+For the original seven compared rows (1, 2, 3, 4, 12, 13 and 14), we
+did not identify earlier rigorous existence proofs in the sources
+reviewed through 23 October 2026. A supplement for rows 5, 6 and 10,
+reviewed through 25 October 2026, likewise did not identify earlier
+rigorous existence proofs for those specified entries. These reviews
+distinguish figure-eight and isosceles collision-brake results from the
+present candidates. Citation-index access was incomplete, and an
+identified citing review and a related full text were not obtained.
+These are limits of the reviewed evidence; no claim of priority is made.
+
+\paragraph{Conclusion.}
+The retained evidence gives thirteen Arb-certified parameter boxes and
+ten same-zero comparisons using a second flow route. The six adopted
+CAPD paths are supported by the reachable-family and tangent argument
+and their selected-trace audits. Rows 11, 15 and 16 retain Arb-only
+certification; the second-route certificates for rows 11 and 16 remain
+on hold. These are bounded certification
+results for published numerical candidates; no count of geometrically
+distinct orbits, least-period result, stability result, catalogue
+completeness or priority claim follows.
+
+\clearpage
+\paragraph{Acknowledgments.}
+The author is grateful to Hristov and coauthors for publishing their
+numerical discoveries and accompanying catalogues, and to the developers
+of Arb, python-flint, MPFR and CAPD for the software used here. These
+published data, methods and software make the present certification work
+possible.
+
+\paragraph{Use of AI.}
+AI systems assisted with the research planning, prose mathematics,
+implementation, record checking, mathematical reading, comparison
+and drafting. The author is responsible for the claims and presentation;
+AI assistance is not human expert review or formal verification.
+
+\begin{thebibliography}{99}
+\bibitem{Hristov}
+I. Hristov, R. Hristova, T. Puzynina, Z. Sharipov and Z. Tukhliev,
+\emph{Numerical search for three-body periodic free-fall orbits with
+central symmetry}, arXiv:2503.00432v1 (2025).
+\url{https://arxiv.org/abs/2503.00432v1}.
+
+\bibitem{Data}
+I. Hristov et al., accompanying numerical data,
+\texttt{euler\_100\_4860.txt}, database of 4,860 orbits.
+\url{https://db2.fmi.uni-sofia.bg/3bodysym4860/}.
+
+\bibitem{FreeData}
+I. Hristov et al., accompanying data for \emph{Three-body periodic
+collisionless equal-mass free-fall orbits revisited}, full and self-dual
+catalogues, \texttt{sol\_80.txt} and \texttt{sd\_80.txt}.
+\url{https://db2.fmi.uni-sofia.bg/3bodyfree/}.
+
+\bibitem{Montgomery}
+R. Montgomery, \emph{Dropping Bodies}, arXiv:2207.02582v1 (2022).
+\url{https://arxiv.org/abs/2207.02582v1}.
+
+\bibitem{KapelaZgliczynski}
+T. Kapela and P. Zgliczy\'nski,
+\emph{An existence of simple choreographies for N-body problem---a
+computer assisted proof}, arXiv:math/0304404v1 (2003).
+\url{https://arxiv.org/abs/math/0304404v1}.
+
+\bibitem{KapelaSimo}
+T. Kapela and C. Sim\'o,
+\emph{Rigorous KAM results around arbitrary periodic orbits for
+Hamiltonian Systems}, arXiv:1105.3235v1 (2011).
+\url{https://arxiv.org/abs/1105.3235v1}.
+
+\bibitem{Johansson}
+F. Johansson, \emph{Arb: Efficient Arbitrary-Precision Midpoint-Radius
+Interval Arithmetic}, IEEE Transactions on Computers 66 (2017),
+1281--1292; arXiv:1611.02831.
+\url{https://arxiv.org/abs/1611.02831}.
+
+\bibitem{PythonFlint}
+python-flint contributors, version 0.9.0 documentation,
+\emph{arb---real numbers} and \emph{arb\_mat---matrices over real numbers}.
+\url{https://python-flint.readthedocs.io/en/latest/arb.html};
+\url{https://python-flint.readthedocs.io/en/latest/arb_mat.html}.
+
+\bibitem{MPFR}
+MPFR contributors, \emph{GNU MPFR 4.2.2}, Sections 1 and 4.4.
+\url{https://www.mpfr.org/mpfr-4.2.2/mpfr.html}.
+
+\bibitem{CAPD}
+T. Kapela, M. Mrozek, D. Wilczak and P. Zgliczy\'nski,
+\emph{CAPD::DynSys: a flexible C++ toolbox for rigorous numerical analysis
+of dynamical systems}, Communications in Nonlinear Science and Numerical
+Simulation 101 (2021), 105578; arXiv:2010.07097.
+\url{https://arxiv.org/abs/2010.07097}.
+
+\bibitem{BrakeSyzygy}
+R. Moeckel, R. Montgomery and A. Venturelli,
+\emph{From Brake to Syzygy}, Archive for Rational Mechanics and Analysis
+204 (2012), 1009--1060; arXiv:1109.1089.
+\url{https://arxiv.org/abs/1109.1089}.
+
+\bibitem{LiLiao}
+X. Li and S. Liao, \emph{Collisionless periodic orbits in the free-fall
+three-body problem}, New Astronomy 70 (2019), 22--26;
+arXiv:1805.07980. \url{https://arxiv.org/abs/1805.07980}.
+
+\bibitem{Revisited}
+I. Hristov, R. Hristova, V. Dmitra\v{s}inovi\'c and K. Tanikawa,
+\emph{Three-body periodic collisionless equal-mass free-fall orbits
+revisited}, Celestial Mechanics and Dynamical Astronomy 136 (2024), 7;
+arXiv:2308.16159. \url{https://arxiv.org/abs/2308.16159}.
+\end{thebibliography}
+\end{document}

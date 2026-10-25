@@ -1,0 +1,97 @@
+{
+  "version": "1.0.0",
+  "title": "Interval certification of selected equal-mass three-body periodic brake orbits",
+  "Arb_rows": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "MPFR_rows": [
+    1,
+    2,
+    3,
+    12
+  ],
+  "CAPD_rows": [
+    4,
+    5,
+    6,
+    10,
+    13,
+    14
+  ],
+  "same_zero_rows": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    10,
+    12,
+    13,
+    14
+  ],
+  "Arb_only_rows": [
+    11,
+    15,
+    16
+  ],
+  "second_route_on_hold": [
+    11,
+    16
+  ],
+  "certificate_count": 23,
+  "claims": [
+    "Existence of a nonconstant collision-free periodic solution in each of 13 normalized parameter boxes, conditional on the stated validated-flow and symmetry premises.",
+    "Local uniqueness of the reduced zero in each box.",
+    "Exact matching centers and nested boxes identify the same reduced zero in ten implementation pairs."
+  ],
+  "verification": {
+    "default": "exact rational terminal algebra and data-to-paper consistency; saved F/J enclosures are premises",
+    "audit": "six selected CAPD paths have separate saved-record/source audits; full trace replay is optional and not part of default checks",
+    "independence": "This packet adapts shared results; it is not a new independent mathematical verification. The implementations share modeling and symmetry premises.",
+    "reader_scope": "545 PASS and 124 PASS_SAVED_RECORD in the prior reading; existing audit experience and allowed summary exposure; not a blind new session."
+  },
+  "lean": {
+    "level": "L0",
+    "reason": "Large interval integrations and Krawczyk tests have no practical Lean formalization route in this work; separate implementations are used. No formal proof is claimed."
+  },
+  "not_claimed": [
+    "geometric distinctness of all listed rows",
+    "least period",
+    "stability",
+    "catalogue completeness",
+    "discovery of the numerical candidates",
+    "priority or absence of all previous rigorous proofs",
+    "human peer review",
+    "full ODE/Taylor/binary revalidation by default checks"
+  ],
+  "catalogue": {
+    "positive_rows": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      13,
+      14
+    ],
+    "earlier_labels_unconfirmed": [
+      4,
+      10,
+      12
+    ],
+    "scope": "Positive decimal-token agreement in the reviewed tables; three nonmatches are retained search records, not a new exhaustive search."
+  }
+}

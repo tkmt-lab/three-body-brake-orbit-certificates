@@ -1,0 +1,1413 @@
+{
+  "scope": "Original input hashes and exported derivatives; numerical values in retained JSON fields unchanged. Catalogue excerpts remain attributed third-party data.",
+  "files": [
+    {
+      "path": "data/certificates/A01.json",
+      "original_sha256": "5a003c3aef57b649b47da7f97251cbb490526181038ae2360ba098401836fd5d",
+      "original_bytes": 100202,
+      "sha256": "5a003c3aef57b649b47da7f97251cbb490526181038ae2360ba098401836fd5d",
+      "bytes": 100202,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/certificates/A02.json",
+      "original_sha256": "a15db77aeebb337517be1728646511a632919fc029e3bdfa83cd3aeb913788c4",
+      "original_bytes": 1562280,
+      "sha256": "a15db77aeebb337517be1728646511a632919fc029e3bdfa83cd3aeb913788c4",
+      "bytes": 1562280,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/certificates/A03.json",
+      "original_sha256": "c264e91f26ee6aeb875e10edb52a53f05bed2328e33404b95f05be75c61e86f1",
+      "original_bytes": 1873736,
+      "sha256": "c264e91f26ee6aeb875e10edb52a53f05bed2328e33404b95f05be75c61e86f1",
+      "bytes": 1873736,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/certificates/A04.json",
+      "original_sha256": "708be78fb49ea86961052730070dae71679ab17b7a708758dd934e2a18e9d7ab",
+      "original_bytes": 2507248,
+      "sha256": "708be78fb49ea86961052730070dae71679ab17b7a708758dd934e2a18e9d7ab",
+      "bytes": 2507248,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/certificates/A05.json",
+      "original_sha256": "4c68e8f5d6a3fc6d11c46f433e2c77a68f74b76a896b29b8e2fb9d9200b8e9e9",
+      "original_bytes": 428146,
+      "sha256": "4c68e8f5d6a3fc6d11c46f433e2c77a68f74b76a896b29b8e2fb9d9200b8e9e9",
+      "bytes": 428146,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/certificates/A06.json",
+      "original_sha256": "b6fa788e84e53d799d7229702b543185229f4b98c7ca70a57f4858696a3cafd7",
+      "original_bytes": 432265,
+      "sha256": "b6fa788e84e53d799d7229702b543185229f4b98c7ca70a57f4858696a3cafd7",
+      "bytes": 432265,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/certificates/A10.json",
+      "original_sha256": "7bbfa528c25ae852c9f18b08d6731654eb3ecf3a76c45e77575d063ed2c8fd9b",
+      "original_bytes": 4019261,
+      "sha256": "7bbfa528c25ae852c9f18b08d6731654eb3ecf3a76c45e77575d063ed2c8fd9b",
+      "bytes": 4019261,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/certificates/A11.json",
+      "original_sha256": "1fb85eb135b20710497767cce8ef8d72c02652f0b9ecc78a2ca42856b36b7b21",
+      "original_bytes": 4026376,
+      "sha256": "1fb85eb135b20710497767cce8ef8d72c02652f0b9ecc78a2ca42856b36b7b21",
+      "bytes": 4026376,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/certificates/A12.json",
+      "original_sha256": "730d9a3233546fafddcf76411d57840d0ae3fa020d7b9f576319590384d4af8f",
+      "original_bytes": 236057,
+      "sha256": "730d9a3233546fafddcf76411d57840d0ae3fa020d7b9f576319590384d4af8f",
+      "bytes": 236057,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/certificates/A13.json",
+      "original_sha256": "7da293bff80b557396d0b66574de56df97b6422ea655952c5f57d2f111ffdde5",
+      "original_bytes": 356779,
+      "sha256": "7da293bff80b557396d0b66574de56df97b6422ea655952c5f57d2f111ffdde5",
+      "bytes": 356779,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/certificates/A14.json",
+      "original_sha256": "214aea007d98b7936f0eb6a8c4b94baa9f83d223d7ff5ff86974ed57c1b5e4e6",
+      "original_bytes": 360108,
+      "sha256": "214aea007d98b7936f0eb6a8c4b94baa9f83d223d7ff5ff86974ed57c1b5e4e6",
+      "bytes": 360108,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/certificates/A15.json",
+      "original_sha256": "c33f394a577576eb73ffd590e3394b2c930e1c7660297858917a0eb398ca0246",
+      "original_bytes": 617415,
+      "sha256": "c33f394a577576eb73ffd590e3394b2c930e1c7660297858917a0eb398ca0246",
+      "bytes": 617415,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/certificates/A16.json",
+      "original_sha256": "8278395d48b9d46ef9e326f2496a68a6f9f1bf0f54d31a93c8c036dcca8d8574",
+      "original_bytes": 548089,
+      "sha256": "8278395d48b9d46ef9e326f2496a68a6f9f1bf0f54d31a93c8c036dcca8d8574",
+      "bytes": 548089,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/certificates/B01.json",
+      "original_sha256": "ed8753ea57fdd91b51a84bb4ab7ecdec3497dcffc80a0b419532a64344818aba",
+      "original_bytes": 58501,
+      "sha256": "fb88258db8a4980f75de591b39d0e7867b9d1e3dfff39dac8943ca06d3dd693d",
+      "bytes": 131742,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/certificates/B02.json",
+      "original_sha256": "e3ac0be8d642a9e7a24a38ee6aece0e370bd02a87c23af0d88f12abc543dcd09",
+      "original_bytes": 496140,
+      "sha256": "e2c3d78b3654e585d8d4656a21af5507b4659f319deb58210b01dbf172376aac",
+      "bytes": 1260893,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/certificates/B03.json",
+      "original_sha256": "356dcf47b7b82e9fc4d3001b724f99b0c0e68fd366e1a360b617cf48fff249cf",
+      "original_bytes": 621493,
+      "sha256": "164982ea80e332ab560182c896153868c160b2963162815cc458c7e28eda6cf5",
+      "bytes": 1573734,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/certificates/B12.json",
+      "original_sha256": "eaed9dadbdfdd9c521e557a1b22e14e1ba125efa426a4702e6b55aeaf55d04c1",
+      "original_bytes": 113967,
+      "sha256": "1d098bb4d9e584658879fbd62873af166c8ade31bdcfe405c0b13231f9c250d0",
+      "bytes": 299264,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/certificates/C04.json",
+      "original_sha256": "404c82d3b8a69de4c3ae39e52249378fafcf9f107adc4bca394a386997aade53",
+      "original_bytes": 27989,
+      "sha256": "404c82d3b8a69de4c3ae39e52249378fafcf9f107adc4bca394a386997aade53",
+      "bytes": 27989,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/certificates/C05.json",
+      "original_sha256": "f84187d1f91fb297dfc253e30163128bc79469cec7c1eee18a9bb821d789667e",
+      "original_bytes": 45267,
+      "sha256": "f84187d1f91fb297dfc253e30163128bc79469cec7c1eee18a9bb821d789667e",
+      "bytes": 45267,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/certificates/C06.json",
+      "original_sha256": "47cc9248bbb400d5f3ce174040d1c30558013e744849a23793fcd0372ab80619",
+      "original_bytes": 45343,
+      "sha256": "47cc9248bbb400d5f3ce174040d1c30558013e744849a23793fcd0372ab80619",
+      "bytes": 45343,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/certificates/C10.json",
+      "original_sha256": "56aca47e5035580635947cb73647fe852bd8c2163b1634911b351fa01f2f639a",
+      "original_bytes": 45395,
+      "sha256": "56aca47e5035580635947cb73647fe852bd8c2163b1634911b351fa01f2f639a",
+      "bytes": 45395,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/certificates/C13.json",
+      "original_sha256": "3fb1da2ecb5c4d56c19d8ec9da54115bd6b7ee8a5ce5832749572043953a2540",
+      "original_bytes": 27708,
+      "sha256": "3fb1da2ecb5c4d56c19d8ec9da54115bd6b7ee8a5ce5832749572043953a2540",
+      "bytes": 27708,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/certificates/C14.json",
+      "original_sha256": "d08261affa56729db10a5f301d31a95c2b8bb0d3f0e77d5f39087c2c085b5662",
+      "original_bytes": 27912,
+      "sha256": "d08261affa56729db10a5f301d31a95c2b8bb0d3f0e77d5f39087c2c085b5662",
+      "bytes": 27912,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/settings/C04-c0.json",
+      "original_sha256": "454e45551918633ed3e9803038d326cab81d93cf3cdc82a6d17249027b1f9f0c",
+      "original_bytes": 11360,
+      "sha256": "eca0323a8ebb3d37d27c4ff7fc8982c31fc7a5ee8784d3dd3450e691a1178fdf",
+      "bytes": 57,
+      "transformation": "selected JSON fields; values unchanged",
+      "removed_json_pointers": [],
+      "exported_top_level_fields": [
+        "precision",
+        "order",
+        "tol_exp"
+      ],
+      "projection_note": "Original SHA256 identifies full record. Export retains only the fields present here, with unchanged values; omitted fields are outside this projection."
+    },
+    {
+      "path": "data/settings/C04-c1.json",
+      "original_sha256": "cabcfa9dba03b04fd246937ad2e98ad9bb04a159a2c48c99bb4bd28303031071",
+      "original_bytes": 39035,
+      "sha256": "01524d91663138b99f4f1217fbcee66119acc8e7231fd09a41d8535e512ec2a8",
+      "bytes": 57,
+      "transformation": "selected JSON fields; values unchanged",
+      "removed_json_pointers": [],
+      "exported_top_level_fields": [
+        "precision",
+        "order",
+        "tol_exp"
+      ],
+      "projection_note": "Original SHA256 identifies full record. Export retains only the fields present here, with unchanged values; omitted fields are outside this projection."
+    },
+    {
+      "path": "data/settings/C13-c0.json",
+      "original_sha256": "e145587a3f0b3b070067cce6959e61fdb997e4d077ebd6d1aa240813e8279769",
+      "original_bytes": 5075,
+      "sha256": "eca0323a8ebb3d37d27c4ff7fc8982c31fc7a5ee8784d3dd3450e691a1178fdf",
+      "bytes": 57,
+      "transformation": "selected JSON fields; values unchanged",
+      "removed_json_pointers": [],
+      "exported_top_level_fields": [
+        "precision",
+        "order",
+        "tol_exp"
+      ],
+      "projection_note": "Original SHA256 identifies full record. Export retains only the fields present here, with unchanged values; omitted fields are outside this projection."
+    },
+    {
+      "path": "data/settings/C13-c1.json",
+      "original_sha256": "47bb32a5713d8dc7c065ee5360b1e728b125c660f09771ad3aa0ed308caede1f",
+      "original_bytes": 13659,
+      "sha256": "01524d91663138b99f4f1217fbcee66119acc8e7231fd09a41d8535e512ec2a8",
+      "bytes": 57,
+      "transformation": "selected JSON fields; values unchanged",
+      "removed_json_pointers": [],
+      "exported_top_level_fields": [
+        "precision",
+        "order",
+        "tol_exp"
+      ],
+      "projection_note": "Original SHA256 identifies full record. Export retains only the fields present here, with unchanged values; omitted fields are outside this projection."
+    },
+    {
+      "path": "data/settings/C14-c0.json",
+      "original_sha256": "7a22902eb32427b24c737c8eec9edfcf877b58e9baa73195fb3653a462ee4a88",
+      "original_bytes": 11360,
+      "sha256": "eca0323a8ebb3d37d27c4ff7fc8982c31fc7a5ee8784d3dd3450e691a1178fdf",
+      "bytes": 57,
+      "transformation": "selected JSON fields; values unchanged",
+      "removed_json_pointers": [],
+      "exported_top_level_fields": [
+        "precision",
+        "order",
+        "tol_exp"
+      ],
+      "projection_note": "Original SHA256 identifies full record. Export retains only the fields present here, with unchanged values; omitted fields are outside this projection."
+    },
+    {
+      "path": "data/settings/C14-c1.json",
+      "original_sha256": "751deb722aca31145015d044f9eb9dfb282d0feb7215a709704919f44f32d0f6",
+      "original_bytes": 39303,
+      "sha256": "01524d91663138b99f4f1217fbcee66119acc8e7231fd09a41d8535e512ec2a8",
+      "bytes": 57,
+      "transformation": "selected JSON fields; values unchanged",
+      "removed_json_pointers": [],
+      "exported_top_level_fields": [
+        "precision",
+        "order",
+        "tol_exp"
+      ],
+      "projection_note": "Original SHA256 identifies full record. Export retains only the fields present here, with unchanged values; omitted fields are outside this projection."
+    },
+    {
+      "path": "data/settings/C05-c0.json",
+      "original_sha256": "d10aa91a0f6e9ccc2da84f22b3d6e27f3f2b8ade809d64c225c3af33878004d9",
+      "original_bytes": 264288,
+      "sha256": "2f0debe6fd5aa5baee0c2c5ebef689d032da7f79cdb04c89988d7e312c19d6dc",
+      "bytes": 57,
+      "transformation": "selected JSON fields; values unchanged",
+      "removed_json_pointers": [],
+      "exported_top_level_fields": [
+        "precision",
+        "order",
+        "tol_exp"
+      ],
+      "projection_note": "Original SHA256 identifies full record. Export retains only the fields present here, with unchanged values; omitted fields are outside this projection."
+    },
+    {
+      "path": "data/settings/C05-c1.json",
+      "original_sha256": "e92228b1d0233d08bae947db93b23886cb42872dbb1939dd9cfb146d97efa2ca",
+      "original_bytes": 689005,
+      "sha256": "b9a19dea6b022ac11c13f011b14534cf4f544e6da4339e222b3d9af1bf10b4d2",
+      "bytes": 57,
+      "transformation": "selected JSON fields; values unchanged",
+      "removed_json_pointers": [],
+      "exported_top_level_fields": [
+        "precision",
+        "order",
+        "tol_exp"
+      ],
+      "projection_note": "Original SHA256 identifies full record. Export retains only the fields present here, with unchanged values; omitted fields are outside this projection."
+    },
+    {
+      "path": "data/settings/C06-c0.json",
+      "original_sha256": "4ab61abc6c515ef6e9d22c481ab767580ddac4602b3860c4a914b32f472e9c29",
+      "original_bytes": 264286,
+      "sha256": "2f0debe6fd5aa5baee0c2c5ebef689d032da7f79cdb04c89988d7e312c19d6dc",
+      "bytes": 57,
+      "transformation": "selected JSON fields; values unchanged",
+      "removed_json_pointers": [],
+      "exported_top_level_fields": [
+        "precision",
+        "order",
+        "tol_exp"
+      ],
+      "projection_note": "Original SHA256 identifies full record. Export retains only the fields present here, with unchanged values; omitted fields are outside this projection."
+    },
+    {
+      "path": "data/settings/C06-c1.json",
+      "original_sha256": "05c5ba795cd445bfc6d18893507ed29aaa70a3b9f4b5ddf86693a8c95438bf54",
+      "original_bytes": 685681,
+      "sha256": "b9a19dea6b022ac11c13f011b14534cf4f544e6da4339e222b3d9af1bf10b4d2",
+      "bytes": 57,
+      "transformation": "selected JSON fields; values unchanged",
+      "removed_json_pointers": [],
+      "exported_top_level_fields": [
+        "precision",
+        "order",
+        "tol_exp"
+      ],
+      "projection_note": "Original SHA256 identifies full record. Export retains only the fields present here, with unchanged values; omitted fields are outside this projection."
+    },
+    {
+      "path": "data/settings/C10-c0.json",
+      "original_sha256": "5b3f09e5ea09228452af41412c5a3ae1c0e610f955093f70528d9bad24c5edf0",
+      "original_bytes": 14810,
+      "sha256": "2f0debe6fd5aa5baee0c2c5ebef689d032da7f79cdb04c89988d7e312c19d6dc",
+      "bytes": 57,
+      "transformation": "selected JSON fields; values unchanged",
+      "removed_json_pointers": [],
+      "exported_top_level_fields": [
+        "precision",
+        "order",
+        "tol_exp"
+      ],
+      "projection_note": "Original SHA256 identifies full record. Export retains only the fields present here, with unchanged values; omitted fields are outside this projection."
+    },
+    {
+      "path": "data/settings/C10-c1.json",
+      "original_sha256": "b9fb95fd94a0fc996c2e47346ddfc19876429712b154cc5d386a697bb478003a",
+      "original_bytes": 51381,
+      "sha256": "b9a19dea6b022ac11c13f011b14534cf4f544e6da4339e222b3d9af1bf10b4d2",
+      "bytes": 57,
+      "transformation": "selected JSON fields; values unchanged",
+      "removed_json_pointers": [],
+      "exported_top_level_fields": [
+        "precision",
+        "order",
+        "tol_exp"
+      ],
+      "projection_note": "Original SHA256 identifies full record. Export retains only the fields present here, with unchanged values; omitted fields are outside this projection."
+    },
+    {
+      "path": "data/status/A.json",
+      "original_sha256": "ef8a2717a36e8492c567840a1038b7961af6e6496c24bf93c78939b7b95cbd26",
+      "original_bytes": 47939,
+      "sha256": "0fd391054c88f7511d4f30d8e26b86115eaf617f0766a987232bdca099bfb351",
+      "bytes": 84,
+      "transformation": "selected JSON fields; values unchanged",
+      "removed_json_pointers": [],
+      "exported_top_level_fields": [
+        "uncertified_rows"
+      ],
+      "projection_note": "Original SHA256 identifies full record. Export retains only the fields present here, with unchanged values; omitted fields are outside this projection."
+    },
+    {
+      "path": "data/status/B.json",
+      "original_sha256": "35bd2f7bbfc8b8d83cb9ab4f273f6dd0c7b167280fd6e1dda38400f7f99929e9",
+      "original_bytes": 11610,
+      "sha256": "124d299594d7c7f50387f8a1f75a2551f13c801df94901349fa552ffd0fbdfd6",
+      "bytes": 1481,
+      "transformation": "selected JSON fields; values unchanged",
+      "removed_json_pointers": [],
+      "exported_top_level_fields": "list records with explicit selected fields",
+      "projection_note": "Original SHA256 identifies full record. Export retains only the fields present here, with unchanged values; omitted fields are outside this projection."
+    },
+    {
+      "path": "data/status/C11.json",
+      "original_sha256": "81cadf6c2eedbebf00af70cfcf78042c29d1309a96da5c1168d72d9a2f7ff5f2",
+      "original_bytes": 2995,
+      "sha256": "483a2768a9fe17df8e62259b1c945e60da19ff1f9de5eb8e9a4d9ccd0db4cc33",
+      "bytes": 60,
+      "transformation": "selected JSON fields; values unchanged",
+      "removed_json_pointers": [],
+      "exported_top_level_fields": [
+        "proof_status"
+      ],
+      "projection_note": "Original SHA256 identifies full record. Export retains only the fields present here, with unchanged values; omitted fields are outside this projection."
+    },
+    {
+      "path": "data/status/C16.json",
+      "original_sha256": "1210631174a6258f3cb69483162562cdde8ddb44c14abf906645fda3cc8ad619",
+      "original_bytes": 30459,
+      "sha256": "61516205574f289fb9c5c8358ab7721669f2cbe1bf86fc45a0ee67490ea1ed8c",
+      "bytes": 60,
+      "transformation": "selected JSON fields; values unchanged",
+      "removed_json_pointers": [],
+      "exported_top_level_fields": [
+        "proof_status"
+      ],
+      "projection_note": "Original SHA256 identifies full record. Export retains only the fields present here, with unchanged values; omitted fields are outside this projection."
+    },
+    {
+      "path": "data/status/C7.json",
+      "original_sha256": "8cc24908d3940984e0a3fd9d6c5809d305e24696be855d251e8b067f257bee11",
+      "original_bytes": 756832,
+      "sha256": "9718ff1859cbd0804b0e4522d054bdc3e177f46e859736462f4e0ec08876c353",
+      "bytes": 24,
+      "transformation": "selected JSON fields; values unchanged",
+      "removed_json_pointers": [],
+      "exported_top_level_fields": [
+        "complete"
+      ],
+      "projection_note": "Original SHA256 identifies full record. Export retains only the fields present here, with unchanged values; omitted fields are outside this projection."
+    },
+    {
+      "path": "data/status/C15.json",
+      "original_sha256": "b4854ea23ef1733d9002d8002a86bcc72145804dcc775a06e4752f2401affb32",
+      "original_bytes": 788665,
+      "sha256": "9718ff1859cbd0804b0e4522d054bdc3e177f46e859736462f4e0ec08876c353",
+      "bytes": 24,
+      "transformation": "selected JSON fields; values unchanged",
+      "removed_json_pointers": [],
+      "exported_top_level_fields": [
+        "complete"
+      ],
+      "projection_note": "Original SHA256 identifies full record. Export retains only the fields present here, with unchanged values; omitted fields are outside this projection."
+    },
+    {
+      "path": "data/status/C17.json",
+      "original_sha256": "c310fef399cc1427522e9efda548d87efcc0835e1cd477eea00ea2c192efe296",
+      "original_bytes": 755357,
+      "sha256": "9718ff1859cbd0804b0e4522d054bdc3e177f46e859736462f4e0ec08876c353",
+      "bytes": 24,
+      "transformation": "selected JSON fields; values unchanged",
+      "removed_json_pointers": [],
+      "exported_top_level_fields": [
+        "complete"
+      ],
+      "projection_note": "Original SHA256 identifies full record. Export retains only the fields present here, with unchanged values; omitted fields are outside this projection."
+    },
+    {
+      "path": "data/status/C20.json",
+      "original_sha256": "15772e8b11b9000888be6fd669ef9062e22628a5aa72ac68ab860035bb0596dc",
+      "original_bytes": 756955,
+      "sha256": "9718ff1859cbd0804b0e4522d054bdc3e177f46e859736462f4e0ec08876c353",
+      "bytes": 24,
+      "transformation": "selected JSON fields; values unchanged",
+      "removed_json_pointers": [],
+      "exported_top_level_fields": [
+        "complete"
+      ],
+      "projection_note": "Original SHA256 identifies full record. Export retains only the fields present here, with unchanged values; omitted fields are outside this projection."
+    },
+    {
+      "path": "data/status/C8.json",
+      "original_sha256": "d4a7e3e9a8325dfbba2e7c60ca3121d4eeb0481600b6576d49fa570ed65f2b5f",
+      "original_bytes": 1029162,
+      "sha256": "f71187ed96705c55143b413f46eaf1bfa4dfd680c4978441cf4ecf77b500cd23",
+      "bytes": 20,
+      "transformation": "selected JSON fields; values unchanged",
+      "removed_json_pointers": [],
+      "exported_top_level_fields": [
+        "pilot"
+      ],
+      "projection_note": "Original SHA256 identifies full record. Export retains only the fields present here, with unchanged values; omitted fields are outside this projection."
+    },
+    {
+      "path": "data/status/C9.json",
+      "original_sha256": "b86f11663e67406514c345d2e47d3432fb30d9f4e8be0c1753b6202d344e1b69",
+      "original_bytes": 1028168,
+      "sha256": "f71187ed96705c55143b413f46eaf1bfa4dfd680c4978441cf4ecf77b500cd23",
+      "bytes": 20,
+      "transformation": "selected JSON fields; values unchanged",
+      "removed_json_pointers": [],
+      "exported_top_level_fields": [
+        "pilot"
+      ],
+      "projection_note": "Original SHA256 identifies full record. Export retains only the fields present here, with unchanged values; omitted fields are outside this projection."
+    },
+    {
+      "path": "data/status/C18.json",
+      "original_sha256": "f16def39af2b3228b5524f1d995cc8a51f5d00e9b835241d2ee2c9540442d22d",
+      "original_bytes": 1029200,
+      "sha256": "f71187ed96705c55143b413f46eaf1bfa4dfd680c4978441cf4ecf77b500cd23",
+      "bytes": 20,
+      "transformation": "selected JSON fields; values unchanged",
+      "removed_json_pointers": [],
+      "exported_top_level_fields": [
+        "pilot"
+      ],
+      "projection_note": "Original SHA256 identifies full record. Export retains only the fields present here, with unchanged values; omitted fields are outside this projection."
+    },
+    {
+      "path": "data/status/C19.json",
+      "original_sha256": "cc5aa82adc1ae4b12da1c095c6c9937a8352abc539c7a182506927127d5f91b1",
+      "original_bytes": 1028210,
+      "sha256": "f71187ed96705c55143b413f46eaf1bfa4dfd680c4978441cf4ecf77b500cd23",
+      "bytes": 20,
+      "transformation": "selected JSON fields; values unchanged",
+      "removed_json_pointers": [],
+      "exported_top_level_fields": [
+        "pilot"
+      ],
+      "projection_note": "Original SHA256 identifies full record. Export retains only the fields present here, with unchanged values; omitted fields are outside this projection."
+    },
+    {
+      "path": "data/status/C15-terminal-failure.json",
+      "original_sha256": "9967e5dfe86489bcf39893d9dbd50819e01d7427c617304b9440b02f686b90cc",
+      "original_bytes": 28344,
+      "sha256": "f8a2415f7fd467bacf0c95a0e6904136259f506e0e16199f86b2ae09c12cb9c3",
+      "bytes": 45,
+      "transformation": "selected JSON fields; values unchanged",
+      "removed_json_pointers": [],
+      "exported_top_level_fields": [
+        "certified",
+        "status"
+      ],
+      "projection_note": "Original SHA256 identifies full record. Export retains only the fields present here, with unchanged values; omitted fields are outside this projection."
+    },
+    {
+      "path": "data/catalogue/euler-first20.txt",
+      "original_sha256": "e93d789a7c1dff2931ff2772754d4072d464704ec35cb9f466274bfc5d2977d3",
+      "original_bytes": 2059907,
+      "sha256": "237e463267eea76602febefab4b2093a83512ec5a82827b21b30b8875d53ffdd",
+      "bytes": 8464,
+      "transformation": "first 20 numerical records; original decimal tokens",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/catalogue/free-first20.txt",
+      "original_sha256": "74a23a8392a4ec75b3e855973a6d4cfcacc90de84784688f516a366d6185dccb",
+      "original_bytes": 2054337,
+      "sha256": "eb36ca2caf199c166fe6344363573f92b78f990317fc9c92c9ebcf63fb18fa5c",
+      "bytes": 8458,
+      "transformation": "first 20 numerical records; original decimal tokens",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/catalogue/crosswalk-first.json",
+      "original_sha256": "2e0229fbfbbd0c82db72e30b57c789c8d7d10d6610b63c38ecb96ecba226661f",
+      "original_bytes": 33561,
+      "sha256": "2e0229fbfbbd0c82db72e30b57c789c8d7d10d6610b63c38ecb96ecba226661f",
+      "bytes": 33561,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/catalogue/crosswalk-added.json",
+      "original_sha256": "9973228eea2d9736635834c5dab6105d643dbaed11bd93a298bcd190cd1f972e",
+      "original_bytes": 11861,
+      "sha256": "9973228eea2d9736635834c5dab6105d643dbaed11bd93a298bcd190cd1f972e",
+      "bytes": 11861,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/catalogue/matched-records.json",
+      "original_sha256": "c604523e5f961e5cd06fdde523788d23c8e03643400c4b183a7b6c03109a9fb1",
+      "original_bytes": 15070,
+      "sha256": "c604523e5f961e5cd06fdde523788d23c8e03643400c4b183a7b6c03109a9fb1",
+      "bytes": 15070,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "optional/arb/validated_flow.py",
+      "original_sha256": "87f2a5d89864686dcaf6ff06dc6c5c3dd4426cb5afb70108e8565ab8b9410441",
+      "original_bytes": 10967,
+      "sha256": "87f2a5d89864686dcaf6ff06dc6c5c3dd4426cb5afb70108e8565ab8b9410441",
+      "bytes": 10967,
+      "transformation": "byte-identical",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "optional/arb/run_certificate.py",
+      "original_sha256": "512e0a6b38cbc8760bd2a8a4f4ff69214df5378efbbf0f1bbccd904e743d91ca",
+      "original_bytes": 4504,
+      "sha256": "512e0a6b38cbc8760bd2a8a4f4ff69214df5378efbbf0f1bbccd904e743d91ca",
+      "bytes": 4504,
+      "transformation": "byte-identical",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "optional/arb/requirements.txt",
+      "original_sha256": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d",
+      "original_bytes": 20,
+      "sha256": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d",
+      "bytes": 20,
+      "transformation": "byte-identical",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "optional/arb/environment.json",
+      "original_sha256": "876c1297052e9f0b5aeded61e4ccad443103b3f309c718cf85f1f6ecc11b2eac",
+      "original_bytes": 2207,
+      "sha256": "876c1297052e9f0b5aeded61e4ccad443103b3f309c718cf85f1f6ecc11b2eac",
+      "bytes": 2207,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "optional/mpfr/src/certify.cpp",
+      "original_sha256": "e925b3c4207e5fe8bf81deb67247298ee72762b3fc5ab4e3ad3f6e69ba29b316",
+      "original_bytes": 7552,
+      "sha256": "e925b3c4207e5fe8bf81deb67247298ee72762b3fc5ab4e3ad3f6e69ba29b316",
+      "bytes": 7552,
+      "transformation": "byte-identical",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "optional/mpfr/src/check.cpp",
+      "original_sha256": "98f9b35882ca41de7f98a62dcad559885e5db9079f93e55fdd21f7fd5f674a3f",
+      "original_bytes": 875,
+      "sha256": "98f9b35882ca41de7f98a62dcad559885e5db9079f93e55fdd21f7fd5f674a3f",
+      "bytes": 875,
+      "transformation": "byte-identical",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "optional/mpfr/src/dynamics.hpp",
+      "original_sha256": "70bfe279256943e5abe52bace1402296cb8ce7ec9c0ba63059f117b87eae70d1",
+      "original_bytes": 5336,
+      "sha256": "70bfe279256943e5abe52bace1402296cb8ce7ec9c0ba63059f117b87eae70d1",
+      "bytes": 5336,
+      "transformation": "byte-identical",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "optional/mpfr/src/interval.hpp",
+      "original_sha256": "b438bcdcefc742d4c3d7ab3d618b3acc646500ff92ce097500e9037cbb049a97",
+      "original_bytes": 7526,
+      "sha256": "b438bcdcefc742d4c3d7ab3d618b3acc646500ff92ce097500e9037cbb049a97",
+      "bytes": 7526,
+      "transformation": "byte-identical",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "optional/mpfr/Makefile",
+      "original_sha256": "fa394f3cbc43b6040a132df1eb5f0a5c30101c24e0af6d52ee9563fa11b29c1f",
+      "original_bytes": 313,
+      "sha256": "fa394f3cbc43b6040a132df1eb5f0a5c30101c24e0af6d52ee9563fa11b29c1f",
+      "bytes": 313,
+      "transformation": "byte-identical",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "optional/mpfr/settings.json",
+      "original_sha256": "cd39058486cb4a7013669956be7ab5d2a3bee73423a5eaaeff72eddc9f65d961",
+      "original_bytes": 2014,
+      "sha256": "cd39058486cb4a7013669956be7ab5d2a3bee73423a5eaaeff72eddc9f65d961",
+      "bytes": 2014,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "optional/mpfr/optimization.json",
+      "original_sha256": "35ae93cae7eec2f19da040fcd57d462e67232e6470efb54247e1735b636059d2",
+      "original_bytes": 1493,
+      "sha256": "35ae93cae7eec2f19da040fcd57d462e67232e6470efb54247e1735b636059d2",
+      "bytes": 1493,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "optional/capd/capd_order_pilot.cpp",
+      "original_sha256": "26208dee08463c6f0ecd8ed4fb8930be17ba3ed0d70a49d704c34a3234d9683d",
+      "original_bytes": 11495,
+      "sha256": "26208dee08463c6f0ecd8ed4fb8930be17ba3ed0d70a49d704c34a3234d9683d",
+      "bytes": 11495,
+      "transformation": "byte-identical",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "optional/capd/batch1_solver.cpp",
+      "original_sha256": "9ea9e6b4138572bd6e3c1ecffb3e3b866aeeeb42500bd3ec7439e0e059074aea",
+      "original_bytes": 8939,
+      "sha256": "9ea9e6b4138572bd6e3c1ecffb3e3b866aeeeb42500bd3ec7439e0e059074aea",
+      "bytes": 8939,
+      "transformation": "byte-identical",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "optional/capd/batch2_solver.cpp",
+      "original_sha256": "8ce4ab05a73f9fc94a93e5bd28b56e0817c710891aeed8ba4215df60e1028d0e",
+      "original_bytes": 9369,
+      "sha256": "8ce4ab05a73f9fc94a93e5bd28b56e0817c710891aeed8ba4215df60e1028d0e",
+      "bytes": 9369,
+      "transformation": "byte-identical",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "optional/capd/precision10_solver.cpp",
+      "original_sha256": "104f7d9f90d6a372fdcf0e0970f00e555148eb6ab9cfbe935d89cd63e0356222",
+      "original_bytes": 8970,
+      "sha256": "104f7d9f90d6a372fdcf0e0970f00e555148eb6ab9cfbe935d89cd63e0356222",
+      "bytes": 8970,
+      "transformation": "byte-identical",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "optional/capd/row13_radius90.cpp",
+      "original_sha256": "02ab2bedf0c0d54972611fff0e156fa59b86caad21e40c9fd5bac58fe047918b",
+      "original_bytes": 8709,
+      "sha256": "02ab2bedf0c0d54972611fff0e156fa59b86caad21e40c9fd5bac58fe047918b",
+      "bytes": 8709,
+      "transformation": "byte-identical",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "optional/capd/row13_solver.cpp",
+      "original_sha256": "29d4bc91b589d02ea78aa529d19b7db874a32b33b4963a5334c9e1cba71a8cf1",
+      "original_bytes": 8705,
+      "sha256": "29d4bc91b589d02ea78aa529d19b7db874a32b33b4963a5334c9e1cba71a8cf1",
+      "bytes": 8705,
+      "transformation": "byte-identical",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "optional/capd/environment.json",
+      "original_sha256": "c5dfa0f20df22791e9539928d1779f1a1b3cddec324abcb3ca9cbc6bc5a2884e",
+      "original_bytes": 1861,
+      "sha256": "c5dfa0f20df22791e9539928d1779f1a1b3cddec324abcb3ca9cbc6bc5a2884e",
+      "bytes": 1861,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row4/pre-comparison-summary.json",
+      "original_sha256": "b12ac9f0df835dc762257d20739f359c285006e6c5746649e7658f93b40d9553",
+      "original_bytes": 4338,
+      "sha256": "b12ac9f0df835dc762257d20739f359c285006e6c5746649e7658f93b40d9553",
+      "bytes": 4338,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row4/full-check.json",
+      "original_sha256": "f2026b3cbee04d1702ba189d18cf3ad4d34c19a1b773c89992da7ac8361cb615",
+      "original_bytes": 43400,
+      "sha256": "dcf4053235d5aaf1a6739c0969f20e2f1189c6db645a97efa5608ead6e0998da",
+      "bytes": 42556,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": [
+        "/cases/0/compressed_files/stdout/path",
+        "/cases/0/compressed_files/stderr/path",
+        "/cases/0/compressed_files/old/path",
+        "/cases/1/compressed_files/stdout/path",
+        "/cases/1/compressed_files/stderr/path",
+        "/cases/1/compressed_files/old/path"
+      ]
+    },
+    {
+      "path": "audit/row4/terminal-check.json",
+      "original_sha256": "55a87d42c448efee52d191d21d8e6708fb94ccd3b659b6f4b9935fba642ecfcd",
+      "original_bytes": 985,
+      "sha256": "55a87d42c448efee52d191d21d8e6708fb94ccd3b659b6f4b9935fba642ecfcd",
+      "bytes": 985,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row4/provenance-check.json",
+      "original_sha256": "0f27d7eafb8eac3309259bb668c969756292f6cf2028ec32d5ecef14fc1a095e",
+      "original_bytes": 26334,
+      "sha256": "0f27d7eafb8eac3309259bb668c969756292f6cf2028ec32d5ecef14fc1a095e",
+      "bytes": 26334,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row4/input-bindings.json",
+      "original_sha256": "70480bd22b10c6c17055b1eade88fe174ae3a10386b1e0f0fd71aeb3ba4a5026",
+      "original_bytes": 1422,
+      "sha256": "70480bd22b10c6c17055b1eade88fe174ae3a10386b1e0f0fd71aeb3ba4a5026",
+      "bytes": 1422,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row4/input-map.json",
+      "original_sha256": "21fb8fb0538705e475a0f4ece6d20f9e07df6499394ef45e52460f90ef4edb30",
+      "original_bytes": 356,
+      "sha256": "21fb8fb0538705e475a0f4ece6d20f9e07df6499394ef45e52460f90ef4edb30",
+      "bytes": 356,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row4/trace-storage.json",
+      "original_sha256": "b27889b873819bcdc5147cd0e7172be46506e8b66e667819fcc536077758dafb",
+      "original_bytes": 410,
+      "sha256": "b27889b873819bcdc5147cd0e7172be46506e8b66e667819fcc536077758dafb",
+      "bytes": 410,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row4/audit_saved_history.py",
+      "original_sha256": "de542b53eb395abf46d3cf951d950098b5f0dc66a1123c706271260d3842dd02",
+      "original_bytes": 13496,
+      "sha256": "cb09b50d6c304708b7c08bbc9beb6340af4a3fb029a60f769fd66f7f1e7abef1",
+      "bytes": 13418,
+      "transformation": "relocate RAW to adjacent external-evidence; redact local paths",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row4/dyadic.py",
+      "original_sha256": "56d59ea4d1f91e2db1ee6d066446398e1eb92138d95464bfee4cba3a04b2858c",
+      "original_bytes": 2519,
+      "sha256": "56d59ea4d1f91e2db1ee6d066446398e1eb92138d95464bfee4cba3a04b2858c",
+      "bytes": 2519,
+      "transformation": "relocate RAW to adjacent external-evidence; redact local paths",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row4/check_terminal.py",
+      "original_sha256": "52c96c765f4ec8e412daf4ba4528e8dbc5fc0f4f6a7b2b4d2bb81196a6e514ec",
+      "original_bytes": 4046,
+      "sha256": "52c96c765f4ec8e412daf4ba4528e8dbc5fc0f4f6a7b2b4d2bb81196a6e514ec",
+      "bytes": 4046,
+      "transformation": "relocate RAW to adjacent external-evidence; redact local paths",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row5/pre-comparison-summary.json",
+      "original_sha256": "cbcebe82aa662f36700205052d403314c9f19f0223e15cf5861f72e03a4ec0fd",
+      "original_bytes": 677,
+      "sha256": "cbcebe82aa662f36700205052d403314c9f19f0223e15cf5861f72e03a4ec0fd",
+      "bytes": 677,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row5/full-check.json",
+      "original_sha256": "8abdcbe502a2cd2a3714c10ed8293980020eb338b1ccfe33002f675f42ba78f0",
+      "original_bytes": 512196,
+      "sha256": "bfbab8257582d1665364a7af57cb59e30f657a3608a5d1953b3a69d0c8c2034e",
+      "bytes": 511340,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": [
+        "/cases/0/compressed_files/stdout/path",
+        "/cases/0/compressed_files/stderr/path",
+        "/cases/0/compressed_files/old/path",
+        "/cases/1/compressed_files/stdout/path",
+        "/cases/1/compressed_files/stderr/path",
+        "/cases/1/compressed_files/old/path"
+      ]
+    },
+    {
+      "path": "audit/row5/terminal-check.json",
+      "original_sha256": "5df764db78b75945785d0b138fea114336f17d52c6931db7e37e9117553d6c8f",
+      "original_bytes": 1347,
+      "sha256": "5df764db78b75945785d0b138fea114336f17d52c6931db7e37e9117553d6c8f",
+      "bytes": 1347,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row5/provenance-check.json",
+      "original_sha256": "7a8dbda1aec0a81ba54cff892b3cc3fff78b9eaef6b55e06613452c40f0f81eb",
+      "original_bytes": 20251,
+      "sha256": "7a8dbda1aec0a81ba54cff892b3cc3fff78b9eaef6b55e06613452c40f0f81eb",
+      "bytes": 20251,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row5/audit_saved_history.py",
+      "original_sha256": "43dbccbea8a478cc99723645b626ead20a7c29e0380fd73d3aa354e77ff984fb",
+      "original_bytes": 12468,
+      "sha256": "66c4b3692183d17bb30f965d121af66c9649c2dbf9e3c46c2d0d3e652355031e",
+      "bytes": 12390,
+      "transformation": "relocate RAW to adjacent external-evidence; redact local paths",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row5/dyadic.py",
+      "original_sha256": "56d59ea4d1f91e2db1ee6d066446398e1eb92138d95464bfee4cba3a04b2858c",
+      "original_bytes": 2519,
+      "sha256": "56d59ea4d1f91e2db1ee6d066446398e1eb92138d95464bfee4cba3a04b2858c",
+      "bytes": 2519,
+      "transformation": "relocate RAW to adjacent external-evidence; redact local paths",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row5/check_terminal.py",
+      "original_sha256": "e9c5f1d1f69527f628c2a051e585ccc21861f0faca64c02ab0c8034d20c4e81a",
+      "original_bytes": 3640,
+      "sha256": "e9c5f1d1f69527f628c2a051e585ccc21861f0faca64c02ab0c8034d20c4e81a",
+      "bytes": 3640,
+      "transformation": "relocate RAW to adjacent external-evidence; redact local paths",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row6/pre-comparison-summary.json",
+      "original_sha256": "6b5bd575208343dd8836372945bab23c0bf35346172c14c2497e6f377ea7acb1",
+      "original_bytes": 5170,
+      "sha256": "6b5bd575208343dd8836372945bab23c0bf35346172c14c2497e6f377ea7acb1",
+      "bytes": 5170,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row6/full-check.json",
+      "original_sha256": "deef4ab361a59732ac9f5dd8ede9ab06639ec39801cddca49d62b445a8311102",
+      "original_bytes": 510625,
+      "sha256": "82baf5bf552bd76fd1a9577cc5975982cdf2e18f4cb2368d7c393a88db320eca",
+      "bytes": 509769,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": [
+        "/cases/0/compressed_files/stdout/path",
+        "/cases/0/compressed_files/stderr/path",
+        "/cases/0/compressed_files/old/path",
+        "/cases/1/compressed_files/stdout/path",
+        "/cases/1/compressed_files/stderr/path",
+        "/cases/1/compressed_files/old/path"
+      ]
+    },
+    {
+      "path": "audit/row6/terminal-check.json",
+      "original_sha256": "adb7759c35b94946f0b0dae9c2c00f443d5b74e9efd9b0a09a91600a7a475062",
+      "original_bytes": 1350,
+      "sha256": "adb7759c35b94946f0b0dae9c2c00f443d5b74e9efd9b0a09a91600a7a475062",
+      "bytes": 1350,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row6/provenance-check.json",
+      "original_sha256": "d2d6d919f38c8faab6b9f80b316aaf153bba06ebc1361828d3aec2faf653c324",
+      "original_bytes": 21016,
+      "sha256": "d2d6d919f38c8faab6b9f80b316aaf153bba06ebc1361828d3aec2faf653c324",
+      "bytes": 21016,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row6/audit_saved_history.py",
+      "original_sha256": "370fa8fd84c1f904963682dabe29fd801c6cdab8cebda7163a7e6bebdd618902",
+      "original_bytes": 13333,
+      "sha256": "f4e072625512acf98aca83e654b94387af1897d3c3363c1bd9e40146f2391de2",
+      "bytes": 13255,
+      "transformation": "relocate RAW to adjacent external-evidence; redact local paths",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row6/dyadic.py",
+      "original_sha256": "56d59ea4d1f91e2db1ee6d066446398e1eb92138d95464bfee4cba3a04b2858c",
+      "original_bytes": 2519,
+      "sha256": "56d59ea4d1f91e2db1ee6d066446398e1eb92138d95464bfee4cba3a04b2858c",
+      "bytes": 2519,
+      "transformation": "relocate RAW to adjacent external-evidence; redact local paths",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row6/check_terminal.py",
+      "original_sha256": "06cde4d42a2b2264a4448398a5cf2382183c0b9663e281b89d0cbc0f37cedd6a",
+      "original_bytes": 3640,
+      "sha256": "06cde4d42a2b2264a4448398a5cf2382183c0b9663e281b89d0cbc0f37cedd6a",
+      "bytes": 3640,
+      "transformation": "relocate RAW to adjacent external-evidence; redact local paths",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row10/pre-comparison-summary.json",
+      "original_sha256": "c08940fb5ec283e1f285029aa526d8b6305152973998fe001746d1e666415715",
+      "original_bytes": 5355,
+      "sha256": "c08940fb5ec283e1f285029aa526d8b6305152973998fe001746d1e666415715",
+      "bytes": 5355,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row10/full-check.json",
+      "original_sha256": "d63d96ecb08f0a54c488f6cb883f9723a356eca91cdc622430ffcd4839799bfb",
+      "original_bytes": 46934,
+      "sha256": "284d111347eba4afc44e09d6c6e29832d25ce5eafd7b2c5a938724cfb681cb4d",
+      "bytes": 45873,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": [
+        "/cases/0/compressed_files/stdout/path",
+        "/cases/0/compressed_files/stderr/path",
+        "/cases/0/compressed_files/old/path",
+        "/cases/1/compressed_files/stdout/path",
+        "/cases/1/compressed_files/stderr/path",
+        "/cases/1/compressed_files/old/path",
+        "/cases/1/compressed_files/reduction/path"
+      ]
+    },
+    {
+      "path": "audit/row10/terminal-check.json",
+      "original_sha256": "e70b171c5bdf4f71f429b9e3bca58edf496875c786ca157defdba22f38ed5643",
+      "original_bytes": 1555,
+      "sha256": "e70b171c5bdf4f71f429b9e3bca58edf496875c786ca157defdba22f38ed5643",
+      "bytes": 1555,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row10/provenance-check.json",
+      "original_sha256": "6ddbadfc9d734db64c801b694155ee302f895608cfdfd79de74c40cbfee1678b",
+      "original_bytes": 25836,
+      "sha256": "6ddbadfc9d734db64c801b694155ee302f895608cfdfd79de74c40cbfee1678b",
+      "bytes": 25836,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row10/input-bindings.json",
+      "original_sha256": "406a4aa8adc4e2f9f89049e629c866fa5efc302cbced5462f95185506e37f842",
+      "original_bytes": 1700,
+      "sha256": "406a4aa8adc4e2f9f89049e629c866fa5efc302cbced5462f95185506e37f842",
+      "bytes": 1700,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row10/input-map.json",
+      "original_sha256": "ca016537ded36799243b1a6f3421e66643642e3e6b12328a5645e7d8cddf4713",
+      "original_bytes": 420,
+      "sha256": "ca016537ded36799243b1a6f3421e66643642e3e6b12328a5645e7d8cddf4713",
+      "bytes": 420,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row10/trace-storage.json",
+      "original_sha256": "1e142c87d9e685ce23abe3ea7ca2ed9ad75eb10b09ff3a6b31f5f2ffb72714aa",
+      "original_bytes": 405,
+      "sha256": "1e142c87d9e685ce23abe3ea7ca2ed9ad75eb10b09ff3a6b31f5f2ffb72714aa",
+      "bytes": 405,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row10/audit_saved_history.py",
+      "original_sha256": "f1b2f2c4c9c7f7285f9bff704274ddbfe20401a775322ef19fd2c640d82cae77",
+      "original_bytes": 15122,
+      "sha256": "e435a0136f6697046d655e9e406f44b834837b20799911595db69e55c907f0c8",
+      "bytes": 15043,
+      "transformation": "relocate RAW to adjacent external-evidence; redact local paths",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row10/dyadic.py",
+      "original_sha256": "56d59ea4d1f91e2db1ee6d066446398e1eb92138d95464bfee4cba3a04b2858c",
+      "original_bytes": 2519,
+      "sha256": "56d59ea4d1f91e2db1ee6d066446398e1eb92138d95464bfee4cba3a04b2858c",
+      "bytes": 2519,
+      "transformation": "relocate RAW to adjacent external-evidence; redact local paths",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row10/check_terminal.py",
+      "original_sha256": "59da509a8ec74da87c8b163b6666b3a0f23a2d5dfc174fd147fa8666bc51599b",
+      "original_bytes": 4713,
+      "sha256": "59da509a8ec74da87c8b163b6666b3a0f23a2d5dfc174fd147fa8666bc51599b",
+      "bytes": 4713,
+      "transformation": "relocate RAW to adjacent external-evidence; redact local paths",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row13/pre-comparison-summary.json",
+      "original_sha256": "7633e69f93e83ae226b86d3ad5437f2c1a57d5bc6cc877e58571ef75c2d7d98e",
+      "original_bytes": 4350,
+      "sha256": "7633e69f93e83ae226b86d3ad5437f2c1a57d5bc6cc877e58571ef75c2d7d98e",
+      "bytes": 4350,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row13/full-check.json",
+      "original_sha256": "012a0278e51eda16b5e53cc9e059153fe59bd5964a6a0ac8139f3396c9bc99bd",
+      "original_bytes": 39629,
+      "sha256": "dd53347717171d827a7561d05a655372c66bff6fda631c3eb1f5cded9535644c",
+      "bytes": 38780,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": [
+        "/cases/0/compressed_files/stdout/path",
+        "/cases/0/compressed_files/stderr/path",
+        "/cases/0/compressed_files/old/path",
+        "/cases/1/compressed_files/stdout/path",
+        "/cases/1/compressed_files/stderr/path",
+        "/cases/1/compressed_files/old/path"
+      ]
+    },
+    {
+      "path": "audit/row13/terminal-check.json",
+      "original_sha256": "d33920eaa82c703ba68bb403f767fc5ac641397075ee8a44c37a3b2a6aaf7261",
+      "original_bytes": 995,
+      "sha256": "d33920eaa82c703ba68bb403f767fc5ac641397075ee8a44c37a3b2a6aaf7261",
+      "bytes": 995,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row13/provenance-check.json",
+      "original_sha256": "3de28fc244d6b86cf579e58b611966c2f0e38a2a239be7938f85f4e792ff52c9",
+      "original_bytes": 26684,
+      "sha256": "3de28fc244d6b86cf579e58b611966c2f0e38a2a239be7938f85f4e792ff52c9",
+      "bytes": 26684,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row13/input-bindings.json",
+      "original_sha256": "de1cb1756dbde27dd86ca9f7446f549ad6ff90930f477ecabeb4c81cc475555a",
+      "original_bytes": 1623,
+      "sha256": "de1cb1756dbde27dd86ca9f7446f549ad6ff90930f477ecabeb4c81cc475555a",
+      "bytes": 1623,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row13/input-map.json",
+      "original_sha256": "8620e33cd6d417fd6b0f1093863cc9bc4e94d61a10b0459671a6e809f5f996c4",
+      "original_bytes": 353,
+      "sha256": "8620e33cd6d417fd6b0f1093863cc9bc4e94d61a10b0459671a6e809f5f996c4",
+      "bytes": 353,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row13/trace-storage.json",
+      "original_sha256": "d286c84998d04ae9fe7711deb319536eb341bf9c0c6e99ae586521633e908b38",
+      "original_bytes": 410,
+      "sha256": "d286c84998d04ae9fe7711deb319536eb341bf9c0c6e99ae586521633e908b38",
+      "bytes": 410,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row13/audit_saved_history.py",
+      "original_sha256": "40450084dc3d52e5a62b6c95abbbeea793f4fe353f6c897cc885ee6229b0a7ee",
+      "original_bytes": 13498,
+      "sha256": "4ed79faa994683e546a739129bb9453152fee2ccbc987a56585501c08cbcf231",
+      "bytes": 13419,
+      "transformation": "relocate RAW to adjacent external-evidence; redact local paths",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row13/dyadic.py",
+      "original_sha256": "56d59ea4d1f91e2db1ee6d066446398e1eb92138d95464bfee4cba3a04b2858c",
+      "original_bytes": 2519,
+      "sha256": "56d59ea4d1f91e2db1ee6d066446398e1eb92138d95464bfee4cba3a04b2858c",
+      "bytes": 2519,
+      "transformation": "relocate RAW to adjacent external-evidence; redact local paths",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row13/check_terminal.py",
+      "original_sha256": "b9c55cbbc1c016405c8fa49a191f2c90d6eb2d6aa8a549011e09dbbb4b74866a",
+      "original_bytes": 4083,
+      "sha256": "b9c55cbbc1c016405c8fa49a191f2c90d6eb2d6aa8a549011e09dbbb4b74866a",
+      "bytes": 4083,
+      "transformation": "relocate RAW to adjacent external-evidence; redact local paths",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row14/pre-comparison-summary.json",
+      "original_sha256": "8d806ade28df977cb762965de0923531b59f649e844dd471f911b13081266f25",
+      "original_bytes": 4361,
+      "sha256": "8d806ade28df977cb762965de0923531b59f649e844dd471f911b13081266f25",
+      "bytes": 4361,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row14/full-check.json",
+      "original_sha256": "b67af999c5d086d510a723dba97593c0662be67f88a046c2dca15f2aec4d5cf6",
+      "original_bytes": 43342,
+      "sha256": "40e1feba904b0eba3d0a5606434f6686a51a0085fedc0a30c6c63a85198357a0",
+      "bytes": 42491,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": [
+        "/cases/0/compressed_files/stdout/path",
+        "/cases/0/compressed_files/stderr/path",
+        "/cases/0/compressed_files/old/path",
+        "/cases/1/compressed_files/stdout/path",
+        "/cases/1/compressed_files/stderr/path",
+        "/cases/1/compressed_files/old/path"
+      ]
+    },
+    {
+      "path": "audit/row14/terminal-check.json",
+      "original_sha256": "a743db560cda3a8882a5480c8b9afcb3eb1663bd7768a1e713381d11f0ae913c",
+      "original_bytes": 999,
+      "sha256": "a743db560cda3a8882a5480c8b9afcb3eb1663bd7768a1e713381d11f0ae913c",
+      "bytes": 999,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row14/provenance-check.json",
+      "original_sha256": "e0f744bc1ae26c422b7cca16949d0349cef2780c54bb598b5e07dff051b46ad9",
+      "original_bytes": 27510,
+      "sha256": "e0f744bc1ae26c422b7cca16949d0349cef2780c54bb598b5e07dff051b46ad9",
+      "bytes": 27510,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row14/input-bindings.json",
+      "original_sha256": "f2fa3a4fc4db7d3121c52fe1eb21d42a5963dba7ac1fe411bafc114ca20b3be4",
+      "original_bytes": 1431,
+      "sha256": "f2fa3a4fc4db7d3121c52fe1eb21d42a5963dba7ac1fe411bafc114ca20b3be4",
+      "bytes": 1431,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row14/input-map.json",
+      "original_sha256": "ea46244b94551c9283d8145f5d92db0a47e34c7efb3fde6fb5bf87eb86de9c6e",
+      "original_bytes": 363,
+      "sha256": "ea46244b94551c9283d8145f5d92db0a47e34c7efb3fde6fb5bf87eb86de9c6e",
+      "bytes": 363,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row14/trace-storage.json",
+      "original_sha256": "369adb2993ace6e74e2f2ca9336cf0ac173115eb478ca1fd7f4b9b1c682252d4",
+      "original_bytes": 410,
+      "sha256": "369adb2993ace6e74e2f2ca9336cf0ac173115eb478ca1fd7f4b9b1c682252d4",
+      "bytes": 410,
+      "transformation": "JSON reserialization; only listed local metadata removed",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row14/audit_saved_history.py",
+      "original_sha256": "16cb17f965af5de82fd92434bf7b6664dd3bbae7b94ca2ff4b78fa8d8c2285e3",
+      "original_bytes": 13498,
+      "sha256": "2ed5823763fb7461aedbe7a44d7c57c46c7ccd167c1bf04f03af2fccaf09caec",
+      "bytes": 13419,
+      "transformation": "relocate RAW to adjacent external-evidence; redact local paths",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row14/dyadic.py",
+      "original_sha256": "56d59ea4d1f91e2db1ee6d066446398e1eb92138d95464bfee4cba3a04b2858c",
+      "original_bytes": 2519,
+      "sha256": "56d59ea4d1f91e2db1ee6d066446398e1eb92138d95464bfee4cba3a04b2858c",
+      "bytes": 2519,
+      "transformation": "relocate RAW to adjacent external-evidence; redact local paths",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row14/check_terminal.py",
+      "original_sha256": "e776e769a79417cb0f46663e58f7715155441db721a1224543e4e476c72c8880",
+      "original_bytes": 4047,
+      "sha256": "e776e769a79417cb0f46663e58f7715155441db721a1224543e4e476c72c8880",
+      "bytes": 4047,
+      "transformation": "relocate RAW to adjacent external-evidence; redact local paths",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "data/catalogue/C13-row.txt",
+      "original_sha256": "1db69809b9dd409ef012c5cffe63034b8b5964499d14c8c72285f22c32b1976e",
+      "original_bytes": 422,
+      "sha256": "1db69809b9dd409ef012c5cffe63034b8b5964499d14c8c72285f22c32b1976e",
+      "bytes": 422,
+      "transformation": "byte-identical",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "optional/mpfr/src/probe.cpp",
+      "original_sha256": "932ff20efd5d23b396b3242e7c3aaa45009b6e6e3707fe87b3c8a776346beeb7",
+      "original_bytes": 1464,
+      "sha256": "932ff20efd5d23b396b3242e7c3aaa45009b6e6e3707fe87b3c8a776346beeb7",
+      "bytes": 1464,
+      "transformation": "byte-identical",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "optional/mpfr/src/check_multiply.cpp",
+      "original_sha256": "c7f60eeb653a72919ee96b25a13d9f36d2a75703b54456d2b7ddf06a5316086d",
+      "original_bytes": 851,
+      "sha256": "c7f60eeb653a72919ee96b25a13d9f36d2a75703b54456d2b7ddf06a5316086d",
+      "bytes": 851,
+      "transformation": "byte-identical",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row4/controls.json",
+      "original_sha256": "2e292be988f3a0d950661f0bafd3be422987d86b554899b80b139b5c43ff705e",
+      "original_bytes": 2695,
+      "sha256": "2e292be988f3a0d950661f0bafd3be422987d86b554899b80b139b5c43ff705e",
+      "bytes": 2695,
+      "transformation": "JSON serialization; local execution-path fields omitted",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row4/terminal-controls.json",
+      "original_sha256": "3eb446e1bda161411694835cbde3ac9051b64c16e5b5b4b71da700de36fdcb19",
+      "original_bytes": 424,
+      "sha256": "3eb446e1bda161411694835cbde3ac9051b64c16e5b5b4b71da700de36fdcb19",
+      "bytes": 424,
+      "transformation": "JSON serialization; local execution-path fields omitted",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row5/controls.json",
+      "original_sha256": "1a9d308877e859c0a0224a74e78fa49b63824942266055b555e713dd245634f8",
+      "original_bytes": 1157,
+      "sha256": "1a9d308877e859c0a0224a74e78fa49b63824942266055b555e713dd245634f8",
+      "bytes": 1157,
+      "transformation": "JSON serialization; local execution-path fields omitted",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row6/controls.json",
+      "original_sha256": "2e292be988f3a0d950661f0bafd3be422987d86b554899b80b139b5c43ff705e",
+      "original_bytes": 2695,
+      "sha256": "2e292be988f3a0d950661f0bafd3be422987d86b554899b80b139b5c43ff705e",
+      "bytes": 2695,
+      "transformation": "JSON serialization; local execution-path fields omitted",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row10/controls.json",
+      "original_sha256": "2e292be988f3a0d950661f0bafd3be422987d86b554899b80b139b5c43ff705e",
+      "original_bytes": 2695,
+      "sha256": "2e292be988f3a0d950661f0bafd3be422987d86b554899b80b139b5c43ff705e",
+      "bytes": 2695,
+      "transformation": "JSON serialization; local execution-path fields omitted",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row10/terminal-controls.json",
+      "original_sha256": "7c03dc0d13da41d49db00a3e78fb964ee73a3e04ecb672bc227ffa0bb78eb34b",
+      "original_bytes": 371,
+      "sha256": "7c03dc0d13da41d49db00a3e78fb964ee73a3e04ecb672bc227ffa0bb78eb34b",
+      "bytes": 371,
+      "transformation": "JSON serialization; local execution-path fields omitted",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row13/controls.json",
+      "original_sha256": "2e292be988f3a0d950661f0bafd3be422987d86b554899b80b139b5c43ff705e",
+      "original_bytes": 2695,
+      "sha256": "2e292be988f3a0d950661f0bafd3be422987d86b554899b80b139b5c43ff705e",
+      "bytes": 2695,
+      "transformation": "JSON serialization; local execution-path fields omitted",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row13/terminal-controls.json",
+      "original_sha256": "3eb446e1bda161411694835cbde3ac9051b64c16e5b5b4b71da700de36fdcb19",
+      "original_bytes": 424,
+      "sha256": "3eb446e1bda161411694835cbde3ac9051b64c16e5b5b4b71da700de36fdcb19",
+      "bytes": 424,
+      "transformation": "JSON serialization; local execution-path fields omitted",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row14/controls.json",
+      "original_sha256": "2e292be988f3a0d950661f0bafd3be422987d86b554899b80b139b5c43ff705e",
+      "original_bytes": 2695,
+      "sha256": "2e292be988f3a0d950661f0bafd3be422987d86b554899b80b139b5c43ff705e",
+      "bytes": 2695,
+      "transformation": "JSON serialization; local execution-path fields omitted",
+      "removed_json_pointers": []
+    },
+    {
+      "path": "audit/row14/terminal-controls.json",
+      "original_sha256": "3eb446e1bda161411694835cbde3ac9051b64c16e5b5b4b71da700de36fdcb19",
+      "original_bytes": 424,
+      "sha256": "3eb446e1bda161411694835cbde3ac9051b64c16e5b5b4b71da700de36fdcb19",
+      "bytes": 424,
+      "transformation": "JSON serialization; local execution-path fields omitted",
+      "removed_json_pointers": []
+    }
+  ]
+}

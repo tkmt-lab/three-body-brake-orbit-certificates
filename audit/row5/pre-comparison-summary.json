@@ -1,0 +1,19 @@
+{
+  "decision": "採用してよい",
+  "scope": "R015 row5 r140 MAJOR R1 only",
+  "precomparison": true,
+  "producer_report_conclusions_read": false,
+  "source_commit": "65597dcb2649",
+  "C0_steps": 4880,
+  "C1_steps": 4868,
+  "state_components": 87732,
+  "local_C1_components": 394308,
+  "final_branches": {
+    "normal": 9748,
+    "shrink": 0,
+    "refined": 0
+  },
+  "all_H_uniform_containment": "saved strict inequalities plus fixed-source Taylor and endpoint semantics",
+  "remaining_trust": "compiler, MPFR/GMP, CAPD primitive interval/AD/set operations, recorded cloud execution and image identity; no formal proof or binary re-fetch",
+  "other_rows": "not assessed"
+}

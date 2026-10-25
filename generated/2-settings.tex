@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Run family & Bits & Order & Parameter radius & Tolerance\\
+\midrule
+A, rows 2, 3 & 320 & 24 & $2^{-120}$ & $2^{-170}$\\
+A, other successes & 448 & 48 & $2^{-160}$ & $2^{-250}$\\
+B, all successes & 384 & 28 & $2^{-100}$ & $2^{-180}$\\
+C, rows 4, 13, 14: $C^0$ & 320 & 24 & Point enclosure & $2^{-220}$\\
+C, rows 4, 13, 14: $C^1$ & 256 & 24 & $2^{-90}$ or $2^{-100}$ & $2^{-180}$\\
+C, rows 5, 6, 10: $C^0$ & 448 & 56 & Point enclosure & $2^{-300}$\\
+C, rows 5, 6, 10: $C^1$ & 320 & 48 & $2^{-130}$ or $2^{-140}$ & $2^{-260}$\\
+\bottomrule
+\end{tabular}
+\caption{Selected successful settings. A uses an unweighted Picard
+norm on rows 2 and 3 and a fixed diagonal weight on the other rows;
+B uses the unweighted norm. C uses CAPD doubleton enclosures. These
+run families are not a common-setting benchmark.}
+\label{tab:settings}
+\end{table}

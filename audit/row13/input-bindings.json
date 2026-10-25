@@ -1,0 +1,42 @@
+{
+  "studies/R015/speedup/accepted-step-row13/config.json": {
+    "sha256": "675d28349899a9d5dd69a8d36d70511d7cd52fdbe6b839c9d6cad800185036e9",
+    "bytes": 9113,
+    "cache": "config.json"
+  },
+  "studies/R015/speedup/accepted-step-row13/cloud-manifest.json": {
+    "sha256": "d956553c3cb2325aba6c0b80bb0815f83832c085a5f875bab6e774a3d6caf924",
+    "bytes": 16489,
+    "cache": "cloud-manifest.json"
+  },
+  "studies/R015/speedup/accepted-step-row13/full-c0/audit-run.json": {
+    "sha256": "655052370e60f82c3c3adb708ba1b229804c2d3ff20f813ecba802603ecf9c71",
+    "bytes": 13810,
+    "cache": "full-c0/audit-run.json"
+  },
+  "studies/R015/speedup/accepted-step-row13/full-c1/audit-run.json": {
+    "sha256": "62e55d66ed4d74030459c265bf94e3494bceb2e48d3146e88588cfaddf3ba9a1",
+    "bytes": 29919,
+    "cache": "full-c1/audit-run.json"
+  },
+  "studies/R015/speedup/row13-certificate/full-c0.json": {
+    "sha256": "e145587a3f0b3b070067cce6959e61fdb997e4d077ebd6d1aa240813e8279769",
+    "bytes": 5075,
+    "cache": "old-c0.json"
+  },
+  "studies/R015/speedup/row13-radius90/full-c1.json": {
+    "sha256": "47bb32a5713d8dc7c065ee5360b1e728b125c660f09771ad3aa0ed308caede1f",
+    "bytes": 13659,
+    "cache": "old-c1.json"
+  },
+  "studies/R015/speedup/row13-radius90/certificate.json": {
+    "sha256": "3fb1da2ecb5c4d56c19d8ec9da54115bd6b7ee8a5ce5832749572043953a2540",
+    "bytes": 27708,
+    "cache": "certificate.json"
+  },
+  "studies/R015/speedup/row13-radius90/verify-full.json": {
+    "sha256": "ebe72fff1f5afacf544dd1849fa9c483ab773549ddae184f46721ab47690cb23",
+    "bytes": 24000,
+    "cache": "old-c1-reduction.json"
+  }
+}
