@@ -21,8 +21,8 @@
     },
     {
       "path": ".zenodo.json",
-      "bytes": 786,
-      "sha256": "668adc75ccaeefd17b6977d233c6479f71818884f1bd7526851ffc18db599cad"
+      "bytes": 823,
+      "sha256": "9cdaed6c130dcf173ce4fb297df6b0bf8b34838e391eafea12a5d21e24db2271"
     },
     {
       "path": "AGENTS.md",
@@ -41,8 +41,8 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 510,
-      "sha256": "aadf48fed7b4a1162267998bd75e17e9a6fd1f476282ffeb757f89d9d59c38d4"
+      "bytes": 735,
+      "sha256": "cf8ca273b03a73f3bf19a6ee6b84037a43ec7a028a994a1895120571cd2daa26"
     },
     {
       "path": "FORMAT.md",

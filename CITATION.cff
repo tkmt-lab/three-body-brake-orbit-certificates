@@ -10,3 +10,11 @@ license:
   - Apache-2.0
   - CC-BY-4.0
 abstract: "Saved certificates and exact rational terminal checks for thirteen normalized parameter boxes and ten same-zero implementation comparisons. The checks assume the saved validated-flow enclosures."
+preferred-citation:
+  type: article
+  title: "Interval certification of selected equal-mass three-body periodic brake orbits"
+  authors:
+    - family-names: Takimoto
+      given-names: Tatsuhiko
+  version: 1.0.0
+  year: 2026

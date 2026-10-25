@@ -1,7 +1,8 @@
 {
   "title": "Interval certification of selected equal-mass three-body periodic brake orbits",
   "version": "1.0.0",
-  "upload_type": "software",
+  "upload_type": "publication",
+  "publication_type": "preprint",
   "description": "Article and 23 saved certificates for thirteen row-associated parameter boxes, with ten same-zero comparisons across flow implementations. Exact rational terminal and table checks are included; full ODE integration is not part of the default checks. Code is Apache-2.0; original text and generated data are CC BY 4.0; third-party numerical excerpts retain their original terms.",
   "creators": [{"name": "Takimoto, Tatsuhiko", "affiliation": "Independent researcher"}],
   "license": "cc-by-4.0",
