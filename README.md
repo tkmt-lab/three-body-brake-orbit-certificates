@@ -1,5 +1,7 @@
 # Interval certification of selected equal-mass three-body periodic brake orbits
 
+[日本語](README.ja.md)
+
 Thirteen parameter boxes around published numerical candidates admit a
 nonconstant, collision-free periodic solution of the planar equal-mass
 three-body equations. In ten boxes, two flow implementations certify the
